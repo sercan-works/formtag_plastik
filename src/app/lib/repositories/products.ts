@@ -2,28 +2,36 @@ import { sql } from '../db';
 import type { Product } from '../types';
 
 export async function getProducts(): Promise<Product[]> {
-  const result = await sql<Product>`
-    SELECT
-      p.*,
-      c.name AS category_name
-    FROM products p
-    LEFT JOIN categories c ON c.id = p.category_id
-    ORDER BY p.created_at DESC
-  `;
-  return result.rows;
+  try {
+    const result = await sql<Product>`
+      SELECT
+        p.*,
+        c.name AS category_name
+      FROM products p
+      LEFT JOIN categories c ON c.id = p.category_id
+      ORDER BY p.created_at DESC
+    `;
+    return result.rows;
+  } catch {
+    return [];
+  }
 }
 
 export async function getProductById(id: number): Promise<Product | null> {
-  const result = await sql<Product>`
-    SELECT
-      p.*,
-      c.name AS category_name
-    FROM products p
-    LEFT JOIN categories c ON c.id = p.category_id
-    WHERE p.id = ${id}
-    LIMIT 1
-  `;
-  return result.rows[0] ?? null;
+  try {
+    const result = await sql<Product>`
+      SELECT
+        p.*,
+        c.name AS category_name
+      FROM products p
+      LEFT JOIN categories c ON c.id = p.category_id
+      WHERE p.id = ${id}
+      LIMIT 1
+    `;
+    return result.rows[0] ?? null;
+  } catch {
+    return null;
+  }
 }
 
 interface ProductInput {
