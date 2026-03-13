@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import { getProducts } from '@/app/lib/repositories/products';
 
+export const dynamic = 'force-dynamic';
+
 export default async function AdminProductsPage() {
   const products = await getProducts();
 

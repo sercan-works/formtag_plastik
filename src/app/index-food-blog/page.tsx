@@ -11,6 +11,8 @@ import LatestBlog from '../componets/foodBlog/latestBlog'
 
 import { FoodImage } from '../Data/dataThree'
 
+export const dynamic = 'force-dynamic'
+
 interface FoodImage{
     image: string;
     title: string;
