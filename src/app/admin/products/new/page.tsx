@@ -6,43 +6,63 @@ import { uploadProductImage } from '@/app/lib/upload';
 async function createProductAction(formData: FormData) {
   'use server';
 
-  const name = String(formData.get('name') || '').trim();
-  const code = String(formData.get('code') || '').trim();
-  const description = String(formData.get('description') || '').trim();
-  const categoryIdRaw = String(formData.get('category_id') || '').trim();
-  const category_id = categoryIdRaw ? Number(categoryIdRaw) : null;
+  try {
+    const name = String(formData.get('name') || '').trim();
+    const code = String(formData.get('code') || '').trim();
+    const description = String(formData.get('description') || '').trim();
+    const categoryIdRaw = String(formData.get('category_id') || '').trim();
+    const category_id = categoryIdRaw ? Number(categoryIdRaw) : null;
 
-  // Önce URL (manuel) veya yüklenen dosyadan görsel
-  let image_url: string | undefined;
-  const imageFile = formData.get('image') as File | null;
-  if (imageFile?.size && imageFile.size > 0) {
-    const url = await uploadProductImage(imageFile);
-    if (url) image_url = url;
+    let image_url: string | undefined;
+    const imageFile = formData.get('image') as File | null;
+    if (imageFile?.size && imageFile.size > 0) {
+      const url = await uploadProductImage(imageFile);
+      if (url) image_url = url;
+    }
+    if (!image_url) {
+      const urlInput = String(formData.get('image_url') || '').trim();
+      if (urlInput) image_url = urlInput;
+    }
+
+    if (!name || !code) {
+      redirect('/admin/products/new?error=empty');
+    }
+
+    await createProduct({
+      name,
+      code,
+      description: description || undefined,
+      image_url,
+      category_id: category_id || undefined,
+    });
+
+    redirect('/admin/products');
+  } catch {
+    redirect('/admin/products/new?error=server');
   }
-  if (!image_url) {
-    const urlInput = String(formData.get('image_url') || '').trim();
-    if (urlInput) image_url = urlInput;
-  }
-
-  if (!name || !code) return;
-
-  await createProduct({
-    name,
-    code,
-    description: description || undefined,
-    image_url,
-    category_id: category_id || undefined,
-  });
-
-  redirect('/admin/products');
 }
 
-export default async function NewProductPage() {
+export default async function NewProductPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ error?: string }>;
+}) {
+  const { error } = await searchParams;
   const categories = await getCategories();
 
   return (
     <div className="max-w-xl">
       <h2 className="text-xl font-semibold mb-4">Yeni Ürün</h2>
+      {error === 'server' && (
+        <p className="mb-4 p-3 rounded-md bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-300 text-sm">
+          Kayıt sırasında bir hata oluştu. Ürün kodu benzersiz olmalıdır; veritabanı bağlantısını ve Blob ayarlarını kontrol edin.
+        </p>
+      )}
+      {error === 'empty' && (
+        <p className="mb-4 p-3 rounded-md bg-amber-50 dark:bg-amber-900/20 text-amber-700 dark:text-amber-300 text-sm">
+          Ürün adı ve kodu zorunludur.
+        </p>
+      )}
       <form action={createProductAction} className="space-y-4" encType="multipart/form-data">
         <div>
           <label className="block text-sm font-medium mb-1" htmlFor="name">

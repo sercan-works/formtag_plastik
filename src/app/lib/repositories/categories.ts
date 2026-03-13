@@ -2,8 +2,12 @@ import { sql } from '../db';
 import type { Category } from '../types';
 
 export async function getCategories(): Promise<Category[]> {
-  const result = await sql<Category>`SELECT id, name, slug FROM categories ORDER BY name ASC`;
-  return result.rows;
+  try {
+    const result = await sql<Category>`SELECT id, name, slug FROM categories ORDER BY name ASC`;
+    return result.rows;
+  } catch {
+    return [];
+  }
 }
 
 export async function getCategoryById(id: number): Promise<Category | null> {
