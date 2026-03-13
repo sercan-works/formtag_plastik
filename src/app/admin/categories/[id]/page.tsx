@@ -2,7 +2,7 @@ import { redirect } from 'next/navigation';
 import { getCategoryById, updateCategory, deleteCategory } from '@/app/lib/repositories/categories';
 
 interface Props {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }
 
 function slugify(value: string): string {
@@ -33,7 +33,8 @@ async function deleteCategoryAction(id: number) {
 }
 
 export default async function EditCategoryPage({ params }: Props) {
-  const id = Number(params.id);
+  const { id: idParam } = await params;
+  const id = Number(idParam);
   const category = await getCategoryById(id);
 
   if (!category) {

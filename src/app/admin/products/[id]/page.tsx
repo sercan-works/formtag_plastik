@@ -3,7 +3,7 @@ import { getCategories } from '@/app/lib/repositories/categories';
 import { getProductById, updateProduct, deleteProduct } from '@/app/lib/repositories/products';
 
 interface Props {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }
 
 async function updateProductAction(id: number, formData: FormData) {
@@ -38,7 +38,8 @@ async function deleteProductAction(id: number) {
 }
 
 export default async function EditProductPage({ params }: Props) {
-  const id = Number(params.id);
+  const { id: idParam } = await params;
+  const id = Number(idParam);
   const [product, categories] = await Promise.all([
     getProductById(id),
     getCategories(),
