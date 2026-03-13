@@ -1,72 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Formtag Plastik
 
-## Getting Started
+Next.js ile Formtag Plastik kurumsal sitesi. Ürünler JSON dosyası ve yerel görsellerle yönetilir.
 
-First, run the development server:
+## Çalıştırma
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Tarayıcıda [http://localhost:3000](http://localhost:3000) açın.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Ürünler (JSON + yerel görseller)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Veritabanı yok; ürünler **`src/app/Data/products.json`** dosyasından okunur.
 
-## Learn More
+### JSON yapısı
 
-To learn more about Next.js, take a look at the following resources:
+- **vitrin** – Anasayfada üstte kısaca gösterilen öne çıkan ürünler.
+- **anasayfa** – “Ürünlerimiz” bölümünde listelenen ürünler.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Her ürün: `id`, `name`, `code`, `category`, `description`, **`image`** (sadece dosya adı, örn. `"urun-1.jpg"`).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Görseller
 
-## Veritabanı ve Seed
+- Görselleri **`public/images/products/`** klasörüne koyun.
+- JSON’da sadece **dosya adını** yazın (örn. `"image": "urun-1.jpg"`).
+- Örnek: `public/images/products/urun-1.jpg` → JSON’da `"image": "urun-1.jpg"`.
 
-Proje Vercel Postgres (Neon) kullanır. İlk kurulumda tabloları oluşturup örnek veriyi yüklemek için:
+### Örnek `products.json`
 
-### 1. Migration (tabloları oluşturma)
+```json
+{
+  "vitrin": [
+    {
+      "id": "1",
+      "name": "Ürün Adı",
+      "category": "Kategori",
+      "image": "dosya.jpg",
+      "description": "Kısa açıklama.",
+      "code": "FP-001"
+    }
+  ],
+  "anasayfa": [
+    { ... aynı yapı ... }
+  ]
+}
+```
+
+Vitrin ve anasayfa listesini aynı veya farklı ürünlerle doldurabilirsiniz.
+
+## Deploy (Vercel)
 
 ```bash
-npm run db:migrate
+npm run build
 ```
 
-Bu komut `db/migrations/001_init.sql` dosyasını çalıştırır ve `categories`, `products`, `admin_users` tablolarını oluşturur. `.env.local` içinde `POSTGRES_URL` veya `DATABASE_URL` tanımlı olmalıdır.
-
-### 2. Seed (örnek ürünler)
-
-Seed şunları yapar:
-
-- **Kategoriler:** `src/app/Data/products.json` dosyasındaki her benzersiz `category` değeri için bir kategori eklenir (slug otomatik üretilir).
-- **Ürünler:** Aynı JSON dosyasındaki her ürün `products` tablosuna eklenir. Aynı `code` zaten varsa atlanır (`ON CONFLICT DO NOTHING`). Script: `scripts/seed.js`.
-
-**Seed’i çalıştırmak:**
-
-```bash
-npm run db:seed
-```
-
-- Önce migration’ı çalıştırmış olmalısınız (`npm run db:migrate`).
-- Seed'i birden fazla kez çalıştırabilirsiniz.
-
-**Admin girişi:** JWT yok; `.env.local` içinde `ADMIN_USER` (örn. suamb), `ADMIN_PASSWORD` (örn. Ankara06) ve `ADMIN_SESSION_SECRET` ile `/admin/login` üzerinden giriş yapılır.
-
-### Ürün kaydı hatası nasıl bulunur?
-
-- **Lokal:** `npm run dev` ile çalıştırıp yeni ürün eklemeyi dene; hata mesajı hem terminalde hem sayfada (kırmızı kutu içinde "Hata: ...") görünür.
-- **Vercel:** Dashboard → Proje → **Logs** (veya **Functions**); "Create product error" satırında gerçek hata yazacak.
-- **Vercel’de sayfada görmek için:** Proje → Settings → Environment Variables → `DEBUG_ADMIN_ERRORS=1` ekle, tekrar deploy et, ürün eklemeyi dene. Hata metni sayfada görünür. İşin bitince bu değişkeni kaldır.
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Vercel’e deploy etmek için projeyi bağlayıp push etmeniz yeterli. Veritabanı veya ek env gerekmez; `products.json` ve `public/images/products/` repo’da olduğu sürece çalışır.

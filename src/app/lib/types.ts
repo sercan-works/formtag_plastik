@@ -1,25 +1,19 @@
-export interface Category {
-  id: number;
+/** JSON'dan gelen ürün (görsel alanı sadece dosya adı, örn. "1.jpg") */
+export interface ProductFromJson {
+  id: string;
   name: string;
-  slug: string;
+  code: string;
+  description?: string | null;
+  image: string;
+  category: string;
 }
 
+/** Sayfada kullanılan ürün (image tam path) */
 export interface Product {
-  id: number;
+  id: string;
   name: string;
   code: string;
   description: string | null;
-  image_url: string | null;
-  category_id: number | null;
-  created_at: string;
-  updated_at: string;
-  category_name?: string | null;
+  image: string;
+  category: string;
 }
-
-export interface AdminUser {
-  id: number;
-  email: string;
-  password_hash: string;
-  created_at: string;
-}
-
