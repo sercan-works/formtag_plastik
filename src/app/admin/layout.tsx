@@ -14,9 +14,9 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
             <Link href="/admin/categories" className="text-sm hover:text-indigo-600">
               Kategoriler
             </Link>
-            <Link href="/admin/logout" className="text-sm text-red-600 hover:text-red-700">
+            <a href="/admin/logout" className="text-sm text-red-600 hover:text-red-700">
               Çıkış
-            </Link>
+            </a>
           </nav>
         </div>
       </header>
