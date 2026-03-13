@@ -37,7 +37,11 @@ async function createProductAction(formData: FormData) {
     });
 
     redirect('/admin/products');
-  } catch {
+  } catch (e) {
+    const code = (e as { code?: string })?.code;
+    if (code === '23505') {
+      redirect('/admin/products/new?error=duplicate');
+    }
     redirect('/admin/products/new?error=server');
   }
 }
@@ -53,9 +57,14 @@ export default async function NewProductPage({
   return (
     <div className="max-w-xl">
       <h2 className="text-xl font-semibold mb-4">Yeni Ürün</h2>
+      {error === 'duplicate' && (
+        <p className="mb-4 p-3 rounded-md bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-300 text-sm">
+          Bu ürün kodu zaten kullanılıyor. Farklı bir <strong>Ürün Kodu</strong> girin.
+        </p>
+      )}
       {error === 'server' && (
         <p className="mb-4 p-3 rounded-md bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-300 text-sm">
-          Kayıt sırasında bir hata oluştu. Ürün kodu benzersiz olmalıdır; veritabanı bağlantısını ve Blob ayarlarını kontrol edin.
+          Kayıt sırasında bir hata oluştu. Veritabanı bağlantısını ve Blob (görsel) ayarlarını kontrol edin.
         </p>
       )}
       {error === 'empty' && (
