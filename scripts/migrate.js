@@ -1,5 +1,5 @@
 /**
- * Veritabanı migration'ını çalıştırır.
+ * Veritabanı migration'larını sırayla çalıştırır.
  * Kullanım: node scripts/migrate.js
  * .env.local içinde POSTGRES_URL (veya DATABASE_URL) tanımlı olmalı.
  */
@@ -14,15 +14,20 @@ if (!connectionString) {
   process.exit(1);
 }
 
-const sqlPath = path.join(__dirname, '..', 'db', 'migrations', '001_init.sql');
-const sql = fs.readFileSync(sqlPath, 'utf8');
+const migrationsDir = path.join(__dirname, '..', 'db', 'migrations');
+const files = fs.readdirSync(migrationsDir).filter((f) => f.endsWith('.sql')).sort();
 
 async function run() {
   const client = new Client({ connectionString });
   try {
     await client.connect();
-    await client.query(sql);
-    console.log('Migration tamamlandı: categories, products, admin_users tabloları oluşturuldu.');
+    for (const file of files) {
+      const sqlPath = path.join(migrationsDir, file);
+      const sql = fs.readFileSync(sqlPath, 'utf8');
+      await client.query(sql);
+      console.log('Çalıştırıldı:', file);
+    }
+    console.log('Tüm migration\'lar tamamlandı.');
   } catch (err) {
     console.error('Migration hatası:', err.message);
     process.exit(1);

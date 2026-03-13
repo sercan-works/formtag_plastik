@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { verifyAdminToken } from './app/lib/auth';
 
 const ADMIN_LOGIN_PATH = '/admin/login';
+const ADMIN_SESSION_SECRET = process.env.ADMIN_SESSION_SECRET || 'formtag-admin-oturum';
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
@@ -10,20 +10,12 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  const isAdminRoute = pathname.startsWith('/admin');
-  if (!isAdminRoute) {
+  if (!pathname.startsWith('/admin')) {
     return NextResponse.next();
   }
 
-  const token = request.cookies.get('admin_token')?.value;
-  if (!token) {
-    const url = request.nextUrl.clone();
-    url.pathname = ADMIN_LOGIN_PATH;
-    return NextResponse.redirect(url);
-  }
-
-  const payload = verifyAdminToken(token);
-  if (!payload) {
+  const sessionCookie = request.cookies.get('admin_session')?.value;
+  if (sessionCookie !== ADMIN_SESSION_SECRET) {
     const url = request.nextUrl.clone();
     url.pathname = ADMIN_LOGIN_PATH;
     return NextResponse.redirect(url);
@@ -35,4 +27,3 @@ export function middleware(request: NextRequest) {
 export const config = {
   matcher: ['/admin/:path*'],
 };
-

@@ -41,20 +41,12 @@ npm run db:migrate
 
 Bu komut `db/migrations/001_init.sql` dosyasını çalıştırır ve `categories`, `products`, `admin_users` tablolarını oluşturur. `.env.local` içinde `POSTGRES_URL` veya `DATABASE_URL` tanımlı olmalıdır.
 
-### 2. Seed (örnek ürünler + admin kullanıcı)
+### 2. Seed (örnek ürünler)
 
 Seed şunları yapar:
 
 - **Kategoriler:** `src/app/Data/products.json` dosyasındaki her benzersiz `category` değeri için bir kategori eklenir (slug otomatik üretilir).
 - **Ürünler:** Aynı JSON dosyasındaki her ürün `products` tablosuna eklenir. Aynı `code` zaten varsa atlanır (`ON CONFLICT DO NOTHING`). Script: `scripts/seed.js`.
-- **Admin kullanıcı:** `.env.local` içinde `ADMIN_EMAIL` ve `ADMIN_PASSWORD` (düz metin) tanımlıysa, seed bu kullanıcıyı ekler. Varsayılan e-posta: `admin@formtag.com`.
-
-**.env.local örneği (admin için):**
-
-```
-ADMIN_EMAIL=admin@formtag.com
-ADMIN_PASSWORD=GirişŞifreniz
-```
 
 **Seed’i çalıştırmak:**
 
@@ -63,7 +55,9 @@ npm run db:seed
 ```
 
 - Önce migration’ı çalıştırmış olmalısınız (`npm run db:migrate`).
-- Seed’i birden fazla kez çalıştırabilirsiniz: kategoriler güncellenir, ürünler aynı koda sahipse eklenmez, admin aynı e-posta ile varsa eklenmez.
+- Seed'i birden fazla kez çalıştırabilirsiniz.
+
+**Admin girişi:** JWT yok; `.env.local` içinde `ADMIN_USER` (örn. suamb), `ADMIN_PASSWORD` (örn. Ankara06) ve `ADMIN_SESSION_SECRET` ile `/admin/login` üzerinden giriş yapılır.
 
 ## Deploy on Vercel
 

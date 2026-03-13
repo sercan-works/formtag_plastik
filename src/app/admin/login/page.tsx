@@ -1,32 +1,25 @@
 import { redirect } from 'next/navigation';
 import { cookies } from 'next/headers';
-import { getAdminByEmail } from '@/app/lib/repositories/adminUsers';
-import { signAdminToken, checkPassword } from '@/app/lib/auth';
+import { isAdminCredentials, getSessionSecret } from '@/app/lib/auth';
 
-async function loginAction(formData: FormData) {
+async function loginAction(formData: FormData): Promise<void> {
   'use server';
 
-  const email = String(formData.get('email') || '').trim().toLowerCase();
+  const username = String(formData.get('username') || '').trim();
   const password = String(formData.get('password') || '');
 
-  if (!email || !password) {
-    return { error: 'E-posta ve şifre zorunludur.' };
+  if (!username || !password) {
+    redirect('/admin/login?error=empty');
   }
 
-  const admin = await getAdminByEmail(email);
-  if (!admin) {
-    return { error: 'Geçersiz e-posta veya şifre.' };
+  if (!isAdminCredentials(username, password)) {
+    redirect('/admin/login?error=invalid');
   }
 
-  if (!checkPassword(password, admin.password_hash)) {
-    return { error: 'Geçersiz e-posta veya şifre.' };
-  }
-
-  const token = signAdminToken(admin.id);
   const cookieStore = await cookies();
-  cookieStore.set('admin_token', token, {
+  cookieStore.set('admin_session', getSessionSecret(), {
     httpOnly: true,
-    secure: true,
+    secure: process.env.NODE_ENV === 'production',
     sameSite: 'lax',
     path: '/',
     maxAge: 60 * 60 * 24 * 7,
@@ -35,7 +28,12 @@ async function loginAction(formData: FormData) {
   redirect('/admin');
 }
 
-export default function AdminLoginPage() {
+export default async function AdminLoginPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ error?: string }>;
+}) {
+  const { error } = await searchParams;
   return (
     <div className="min-h-screen flex items-center justify-center bg-slate-50 dark:bg-slate-900">
       <div className="w-full max-w-md bg-white dark:bg-slate-900 shadow-sm dark:shadow-slate-800 rounded-lg p-8">
@@ -43,15 +41,22 @@ export default function AdminLoginPage() {
         <p className="text-slate-500 mb-6 text-center">
           Formtag Plastik yönetim paneline giriş yapın.
         </p>
+        {error === 'empty' && (
+          <p className="mb-4 text-sm text-amber-600">Kullanıcı adı ve şifre zorunludur.</p>
+        )}
+        {error === 'invalid' && (
+          <p className="mb-4 text-sm text-red-600">Geçersiz kullanıcı adı veya şifre.</p>
+        )}
         <form action={loginAction} className="space-y-4">
           <div>
-            <label className="block text-sm font-medium mb-1" htmlFor="email">
-              E-posta
+            <label className="block text-sm font-medium mb-1" htmlFor="username">
+              Kullanıcı adı
             </label>
             <input
-              id="email"
-              name="email"
-              type="email"
+              id="username"
+              name="username"
+              type="text"
+              autoComplete="username"
               className="w-full rounded-md border border-slate-200 dark:border-slate-700 bg-transparent px-3 py-2 text-sm outline-none focus:border-indigo-600"
               required
             />
@@ -64,6 +69,7 @@ export default function AdminLoginPage() {
               id="password"
               name="password"
               type="password"
+              autoComplete="current-password"
               className="w-full rounded-md border border-slate-200 dark:border-slate-700 bg-transparent px-3 py-2 text-sm outline-none focus:border-indigo-600"
               required
             />
@@ -79,4 +85,3 @@ export default function AdminLoginPage() {
     </div>
   );
 }
-

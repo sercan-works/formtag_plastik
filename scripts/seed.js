@@ -1,7 +1,7 @@
 /**
  * Veritabanına örnek kategoriler, ürünler ve (isteğe bağlı) admin kullanıcı ekler.
  * Kullanım: node scripts/seed.js
- * .env.local içinde POSTGRES_URL ve (admin için) ADMIN_EMAIL, ADMIN_PASSWORD tanımlı olmalı.
+ * .env.local içinde POSTGRES_URL tanımlı olmalı. Admin girişi env'deki ADMIN_USER/ADMIN_PASSWORD ile yapılır (DB'deki admin_users kullanılmaz).
  */
 require('dotenv').config({ path: '.env.local' });
 const { Client } = require('pg');
@@ -49,24 +49,7 @@ async function main() {
       );
     }
 
-    const adminEmail = process.env.ADMIN_EMAIL || 'admin@formtag.com';
-    const adminPassword = process.env.ADMIN_PASSWORD;
-
-    if (!adminPassword) {
-      console.warn(
-        'ADMIN_PASSWORD tanımlı değil. .env.local içine ADMIN_EMAIL ve ADMIN_PASSWORD ekleyip seed\'i tekrar çalıştırın.'
-      );
-    } else {
-      await client.query(
-        `INSERT INTO admin_users (email, password_hash)
-         VALUES ($1, $2)
-         ON CONFLICT (email) DO NOTHING`,
-        [adminEmail, adminPassword]
-      );
-      console.log('Admin kullanıcısı (' + adminEmail + ') hazır.');
-    }
-
-    console.log('Seed tamamlandı.');
+    console.log('Seed tamamlandı. Admin girişi: .env.local içindeki ADMIN_USER / ADMIN_PASSWORD ile /admin/login');
   } finally {
     await client.end();
   }
