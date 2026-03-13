@@ -38,20 +38,27 @@ async function createProductAction(formData: FormData) {
 
     redirect('/admin/products');
   } catch (e) {
-    const code = (e as { code?: string })?.code;
-    if (code === '23505') {
+    const err = e as { code?: string; message?: string };
+    console.error('[admin/products/new] Create product error:', err?.message ?? e);
+
+    if (err?.code === '23505') {
       redirect('/admin/products/new?error=duplicate');
     }
-    redirect('/admin/products/new?error=server');
+
+    const showDetail = process.env.NODE_ENV !== 'production' || process.env.DEBUG_ADMIN_ERRORS === '1';
+    const detail = showDetail && err?.message
+      ? encodeURIComponent(String(err.message).slice(0, 180).replace(/[^\w\s\-.:]/g, ' '))
+      : '';
+    redirect(`/admin/products/new?error=server${detail ? `&detail=${detail}` : ''}`);
   }
 }
 
 export default async function NewProductPage({
   searchParams,
 }: {
-  searchParams: Promise<{ error?: string }>;
+  searchParams: Promise<{ error?: string; detail?: string }>;
 }) {
-  const { error } = await searchParams;
+  const { error, detail } = await searchParams;
   const categories = await getCategories();
 
   return (
@@ -63,9 +70,14 @@ export default async function NewProductPage({
         </p>
       )}
       {error === 'server' && (
-        <p className="mb-4 p-3 rounded-md bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-300 text-sm">
-          Kayıt sırasında bir hata oluştu. Veritabanı bağlantısını ve Blob (görsel) ayarlarını kontrol edin.
-        </p>
+        <div className="mb-4 p-3 rounded-md bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-300 text-sm">
+          <p>Kayıt sırasında bir hata oluştu. Veritabanı bağlantısını ve Blob (görsel) ayarlarını kontrol edin.</p>
+          {detail && (
+            <p className="mt-2 font-mono text-xs break-words opacity-90">
+              Hata: {decodeURIComponent(detail)}
+            </p>
+          )}
+        </div>
       )}
       {error === 'empty' && (
         <p className="mb-4 p-3 rounded-md bg-amber-50 dark:bg-amber-900/20 text-amber-700 dark:text-amber-300 text-sm">

@@ -59,6 +59,12 @@ npm run db:seed
 
 **Admin girişi:** JWT yok; `.env.local` içinde `ADMIN_USER` (örn. suamb), `ADMIN_PASSWORD` (örn. Ankara06) ve `ADMIN_SESSION_SECRET` ile `/admin/login` üzerinden giriş yapılır.
 
+### Ürün kaydı hatası nasıl bulunur?
+
+- **Lokal:** `npm run dev` ile çalıştırıp yeni ürün eklemeyi dene; hata mesajı hem terminalde hem sayfada (kırmızı kutu içinde "Hata: ...") görünür.
+- **Vercel:** Dashboard → Proje → **Logs** (veya **Functions**); "Create product error" satırında gerçek hata yazacak.
+- **Vercel’de sayfada görmek için:** Proje → Settings → Environment Variables → `DEBUG_ADMIN_ERRORS=1` ekle, tekrar deploy et, ürün eklemeyi dene. Hata metni sayfada görünür. İşin bitince bu değişkeni kaldır.
+
 ## Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
