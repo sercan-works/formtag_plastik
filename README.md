@@ -29,6 +29,42 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
+## Veritabanı ve Seed
+
+Proje Vercel Postgres (Neon) kullanır. İlk kurulumda tabloları oluşturup örnek veriyi yüklemek için:
+
+### 1. Migration (tabloları oluşturma)
+
+```bash
+npm run db:migrate
+```
+
+Bu komut `db/migrations/001_init.sql` dosyasını çalıştırır ve `categories`, `products`, `admin_users` tablolarını oluşturur. `.env.local` içinde `POSTGRES_URL` veya `DATABASE_URL` tanımlı olmalıdır.
+
+### 2. Seed (örnek ürünler + admin kullanıcı)
+
+Seed şunları yapar:
+
+- **Kategoriler:** `src/app/Data/products.json` dosyasındaki her benzersiz `category` değeri için bir kategori eklenir (slug otomatik üretilir).
+- **Ürünler:** Aynı JSON dosyasındaki her ürün `products` tablosuna eklenir. Aynı `code` zaten varsa atlanır (`ON CONFLICT DO NOTHING`). Script: `scripts/seed.js`.
+- **Admin kullanıcı:** `.env.local` içinde `ADMIN_EMAIL` ve `ADMIN_PASSWORD` (düz metin) tanımlıysa, seed bu kullanıcıyı ekler. Varsayılan e-posta: `admin@formtag.com`.
+
+**.env.local örneği (admin için):**
+
+```
+ADMIN_EMAIL=admin@formtag.com
+ADMIN_PASSWORD=GirişŞifreniz
+```
+
+**Seed’i çalıştırmak:**
+
+```bash
+npm run db:seed
+```
+
+- Önce migration’ı çalıştırmış olmalısınız (`npm run db:migrate`).
+- Seed’i birden fazla kez çalıştırabilirsiniz: kategoriler güncellenir, ürünler aynı koda sahipse eklenmez, admin aynı e-posta ile varsa eklenmez.
+
 ## Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.

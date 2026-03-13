@@ -88,7 +88,9 @@ export default function FoodSlider(){
                     />
                 )}
                 <div className="absolute top-2/4 -translate-y-2/4 start-2/4 ltr:-translate-x-2/4 rtl:translate-x-2/4 text-center hidden md:block">
-                    <Link href="/https://www.instagram.com/shreethemes/" target="_blank"className="py-2 px-5 inline-block font-semibold tracking-wide border align-middle transition duration-500 ease-in-out text-base text-center bg-indigo-600 hover:bg-indigo-700 border-indigo-600 hover:border-indigo-700 text-white rounded-md">Follow Now</Link>
+                    <span className="py-2 px-5 inline-block font-semibold tracking-wide align-middle text-base text-center bg-slate-900/70 text-white rounded-md">
+                        Formtag Plastik Ürün Galerisi
+                    </span>
                 </div>
             </div>
         </div>
