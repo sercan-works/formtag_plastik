@@ -15,7 +15,7 @@ import BlogTwo from "../componets/blogTwo"
 import VideoModalThree from "../componets/videoModal/videoModalThree"
 import Cta from "../componets/cta"
 
-import { startAbout, startServices } from "../Data/dataThree"
+import { startAbout, startServices } from "data/dataThree"
 
 import { FaArrowRight, FaRegEnvelope } from "react-icons/fa"
 import { IconType } from 'react-icons'

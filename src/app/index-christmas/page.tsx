@@ -8,9 +8,9 @@ import ShopFooter from "../componets/Footer/shopFooter";
 import Switcher from "../componets/switcher";
 
 
-import { christmasFeature } from "../Data/dataFour";
-import { productData } from "../Data/data";
-import { topCategories } from "../Data/dataThree";
+import { christmasFeature } from "data/dataFour";
+import { productData } from "data/data";
+import { topCategories } from "data/dataThree";
 import { FiHexagon } from "react-icons/fi";
 import { IconType } from "react-icons";
 

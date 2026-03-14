@@ -8,7 +8,7 @@ import Footer from "../../componets/Footer/footer"
 import Switcher from "../../componets/switcher"
 import Propreties from "../../componets/real-estate/propreties"
 
-import { propertyData } from "../../Data/data"
+import { propertyData } from "data/data"
 import { LiaCompressArrowsAltSolid } from "react-icons/lia"
 import { LuBath, LuBedDouble } from "react-icons/lu"
 import { FiPhone } from "react-icons/fi"

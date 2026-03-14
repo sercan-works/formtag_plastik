@@ -7,7 +7,7 @@ import dynamic from "next/dynamic"
 const TinySlider = dynamic(()=>import('tiny-slider-react'),{ssr: false,});
 import '../../../../node_modules/tiny-slider/dist/tiny-slider.css'
 
-import { insuranceServicesTwo } from '../../Data/dataTwo'
+import { insuranceServicesTwo } from 'data/dataTwo'
 
 interface Services{
     image: string;

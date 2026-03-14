@@ -14,7 +14,7 @@ import VideoModalThree from '../componets/construction/videoModalThree'
 import Counter from '../componets/construction/counter'
 import VideoModal from '../componets/construction/VideoModal'
 
-import { constructionAbout ,constructionProject} from '../Data/dataThree'
+import { constructionAbout ,constructionProject} from 'data/dataThree'
 import { MdKeyboardArrowRight } from 'react-icons/md'
 import { IconType } from 'react-icons'
 

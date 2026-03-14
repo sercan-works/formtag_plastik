@@ -11,7 +11,7 @@ import VideoModalFour from "../componets/videoModal/videoModalFour"
 import BlogTwo from "../componets/blogTwo"
 import Cta from "../componets/cta"
 
-import { corporateAboutTwo,corporateService } from "../Data/dataThree"
+import { corporateAboutTwo,corporateService } from "data/dataThree"
 import { AiOutlineCheckCircle } from "react-icons/ai"
 import { FaArrowRight } from "react-icons/fa"
 import { Icon } from "react-feather"

@@ -10,7 +10,7 @@ import ProductDetail from '../componets/shop/productDetailOne'
 
 import {MdKeyboardArrowRight} from "react-icons/md"
 
-import { productData } from '../Data/data'
+import { productData } from 'data/data'
 
 
 interface ProductData{

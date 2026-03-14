@@ -7,7 +7,7 @@ import Footer from '../componets/Footer/footer'
 import Switcher from '../componets/switcher'
 import VideoModal from '../componets/videoModal/videoModal'
 
-import { courseDetail } from '../Data/dataTwo'
+import { courseDetail } from 'data/dataTwo'
 import { GoClock, GoLock } from 'react-icons/go'
 import { FaSignal } from 'react-icons/fa'
 import { PiBookOpenText, PiShoppingCart } from 'react-icons/pi'

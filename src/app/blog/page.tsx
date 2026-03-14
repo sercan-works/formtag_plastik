@@ -8,7 +8,7 @@ import Switcher from '../componets/switcher'
 import CookieModal from '../componets/cookieModal'
 
 
-import { blogData } from '../Data/data'
+import { blogData } from 'data/data'
 import { MdKeyboardArrowRight } from 'react-icons/md'
 import { FaArrowRight } from 'react-icons/fa'
 

@@ -6,7 +6,7 @@ import NftNavbar from '../componets/Navbar/nftNavbar'
 import Footer from '../componets/Footer/footer'
 import Switcher from '../componets/switcher'
 
-import { walletData } from '../Data/data'
+import { walletData } from 'data/data'
 import { MdKeyboardArrowRight } from 'react-icons/md'
 import { FaArrowRight } from 'react-icons/fa'
 

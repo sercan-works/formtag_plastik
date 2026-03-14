@@ -14,7 +14,7 @@ import VideoModal from '../componets/videoModal/videoModal'
 import TextAnimation from '../componets/seo/textAnimation'
 import Counter from '../componets/seo/counter'
 
-import { SeoServece,clientsDataTwo } from '../Data/data'
+import { SeoServece,clientsDataTwo } from 'data/data'
 import { FaArrowRight } from 'react-icons/fa'
 import { IconType } from 'react-icons'
 

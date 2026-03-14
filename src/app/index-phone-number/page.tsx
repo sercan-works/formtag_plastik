@@ -7,7 +7,7 @@ import Footer from '../componets/Footer/footer'
 import Switcher from '../componets/switcher'
 import CookieModal from '../componets/cookieModal'
 
-import { mobileNumber,aboutTwo } from '../Data/dataThree'
+import { mobileNumber,aboutTwo } from 'data/dataThree'
 import { MdKeyboardArrowRight } from 'react-icons/md'
 import { LuSearch } from 'react-icons/lu'
 import { FaArrowRight } from 'react-icons/fa'

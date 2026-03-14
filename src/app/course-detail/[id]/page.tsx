@@ -9,8 +9,8 @@ import Switcher from '../../componets/switcher'
 import VideoModal from '../../componets/videoModal/videoModal'
 
 
-import { courcesData } from '../../Data/data'
-import { courseDetail } from '../../Data/dataTwo'
+import { courcesData } from 'data/data'
+import { courseDetail } from 'data/dataTwo'
 import { GoClock, GoLock } from 'react-icons/go'
 import { FaSignal } from 'react-icons/fa'
 import { PiBookOpenText, PiShoppingCart } from 'react-icons/pi'

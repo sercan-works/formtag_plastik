@@ -14,7 +14,7 @@ import Cta from '../componets/cta'
 
 import * as Icon from 'react-feather';
 
-import { itSolutionData } from '../Data/data'
+import { itSolutionData } from 'data/data'
 import { FaRegEnvelope } from 'react-icons/fa'
 import { MdOutlineEventNote } from 'react-icons/md'
 import { IconType } from 'react-icons'

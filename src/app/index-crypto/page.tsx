@@ -21,7 +21,7 @@ import * as Icon from 'react-feather';
 import { TypeAnimation } from 'react-type-animation';
 import CountUp from 'react-countup';
 
-import {cryptoServices,benefitsData,crypto} from '../Data/dataThree'
+import {cryptoServices,benefitsData,crypto} from 'data/dataThree'
 
 import { BsCheckCircle } from 'react-icons/bs'
 import { FaArrowRight } from 'react-icons/fa'

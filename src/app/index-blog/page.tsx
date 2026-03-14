@@ -10,8 +10,8 @@ import MasonryBlog from '../componets/blog/masonryBlog'
 
 import * as Icon from 'react-feather';
 
-import { blogData } from '../Data/data'
-import { masonryData } from '../Data/dataTwo'
+import { blogData } from 'data/data'
+import { masonryData } from 'data/dataTwo'
 import { FaArrowRight, FaRegEnvelope } from 'react-icons/fa'
 import { BsPencil } from 'react-icons/bs'
 

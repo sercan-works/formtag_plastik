@@ -8,7 +8,7 @@ import Switcher from '../componets/switcher'
 import MobileApp from '../componets/mobileApp'
 import Form from '../componets/job/form'
 
-import { jobData } from '../Data/data'
+import { jobData } from 'data/data'
 import { MdKeyboardArrowRight, MdOutlineKeyboardArrowLeft } from 'react-icons/md'
 import { GoClock } from 'react-icons/go'
 import { AiOutlineDollar } from 'react-icons/ai'

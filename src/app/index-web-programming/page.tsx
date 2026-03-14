@@ -17,7 +17,7 @@ import { MdOutlineCheckCircle } from 'react-icons/md';
 
 import CountUp from 'react-countup';
 
-import { webServices,faqData } from '../Data/dataFive';
+import { webServices,faqData } from 'data/dataFive';
 import { IconType } from 'react-icons';
 
 interface Services{

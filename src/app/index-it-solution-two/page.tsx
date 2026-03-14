@@ -17,7 +17,7 @@ import CounterTwo from '../componets/consulting/counterTwo'
 
 import * as Icon from 'react-feather';
 
-import { itSolutionData } from '../Data/data'
+import { itSolutionData } from 'data/data'
 import { MdOutlineEventNote } from 'react-icons/md'
 import { IconType } from 'react-icons'
 

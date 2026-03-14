@@ -9,7 +9,7 @@ import Footer from '../../componets/Footer/footer'
 import Switcher from '../../componets/switcher'
 import NftAuctions from '../../componets/nft/nftAuction'
 
-import { NftServices } from '../../Data/data'
+import { NftServices } from 'data/data'
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from 'react-icons/md'
 
 interface Services{

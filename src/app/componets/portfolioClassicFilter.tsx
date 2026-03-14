@@ -8,7 +8,7 @@ const AvailableProject = dynamic(()=>import('./availaleProject'));
 
 import {MdKeyboardArrowRight,MdOutlineKeyboardArrowLeft} from "react-icons/md"
 
-import { portfolioClassic } from '../Data/data';
+import { portfolioClassic } from 'data/data';
 
 interface PortfolioData{
     image: string;

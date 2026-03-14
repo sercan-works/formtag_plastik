@@ -11,7 +11,7 @@ import {Lightbox} from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import { Fullscreen} from "yet-another-react-lightbox/plugins";
 
-import { portfolioTwo , portfolioImageTwo } from '../../Data/dataTwo'
+import { portfolioTwo , portfolioImageTwo } from 'data/dataTwo'
 
 interface portfolioData{
     image: string;

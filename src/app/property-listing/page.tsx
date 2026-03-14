@@ -8,7 +8,7 @@ import Switcher from "../componets/switcher"
 import CookieModal from "../componets/cookieModal"
 import Form from "../componets/real-estate/form"
 
-import { propertyData } from "../Data/data"
+import { propertyData } from "data/data"
 import { LiaCompressArrowsAltSolid } from "react-icons/lia"
 import { LuBath, LuBedDouble } from "react-icons/lu"
 import { MdKeyboardArrowRight, MdOutlineKeyboardArrowLeft } from "react-icons/md"

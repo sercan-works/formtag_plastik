@@ -7,7 +7,7 @@ import JobFooter from '../componets/jobFooter'
 import Switcher from '../componets/switcher'
 import MobileApp from '../componets/mobileApp'
 
-import { jobData } from '../Data/data'
+import { jobData } from 'data/data'
 import { MdKeyboardArrowRight } from 'react-icons/md'
 import { RiMapPinLine } from 'react-icons/ri'
 

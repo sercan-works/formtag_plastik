@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import * as Icon from 'react-feather';
 
-import { RecentPostData,TagscloudItem } from "../Data/dataTwo";
+import { RecentPostData,TagscloudItem } from "data/dataTwo";
 
 interface RecentPost{
     Image: string;

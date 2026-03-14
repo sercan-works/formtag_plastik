@@ -4,7 +4,7 @@ import Link from "next/link"
 import Image from "next/image"
 
 import { FaArrowRight } from 'react-icons/fa'
-import { studioPortfolio } from '../../Data/dataTwo'
+import { studioPortfolio } from 'data/dataTwo'
 
 interface Portfolio{
     image: string;

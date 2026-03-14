@@ -18,9 +18,9 @@ import * as Icon from 'react-feather';
 import {MdKeyboardArrowRight} from "react-icons/md"
 import { FaArrowRight } from 'react-icons/fa'
 
-import { gymServices,blogData } from '../Data/data';
+import { gymServices,blogData } from 'data/data';
 
-import { exersiceData,gymImage,gymTeam } from '../Data/dataThree'
+import { exersiceData,gymImage,gymTeam } from 'data/dataThree'
 
 interface Services{
     iconImage: string;

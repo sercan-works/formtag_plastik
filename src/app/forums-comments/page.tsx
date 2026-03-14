@@ -9,7 +9,7 @@ import Switcher from '../componets/switcher'
 
 import * as Icon from 'react-feather';
 
-import { RecentPostData,authorData } from '../Data/dataTwo'
+import { RecentPostData,authorData } from 'data/dataTwo'
 import { MdKeyboardArrowRight } from 'react-icons/md'
 import { AiOutlineUser } from 'react-icons/ai'
 import { GoClock } from 'react-icons/go'

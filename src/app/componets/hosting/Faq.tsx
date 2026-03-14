@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react'
 
-import { hostingData } from '../../Data/data'
+import { hostingData } from 'data/data'
 
 interface HostingData{
     id: number;

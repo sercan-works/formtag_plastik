@@ -12,8 +12,8 @@ import SpaCta from '../componets/spaCta'
 
 import * as Icon from 'react-feather';
 
-import { teamData,blogData } from '../Data/data'
-import { spaAbout,spaData } from '../Data/dataThree'
+import { teamData,blogData } from 'data/data'
+import { spaAbout,spaData } from 'data/dataThree'
 import { FiArrowUpRight } from 'react-icons/fi'
 import { FaArrowRight } from 'react-icons/fa'
 

@@ -11,7 +11,7 @@ import PricingOne from '../componets/pricingOne'
 import Blog from '../componets/blog'
 import VideoModal from '../componets/videoModal/videoModal'
 
-import { aboutData ,servicesData } from '../Data/dataThree'
+import { aboutData ,servicesData } from 'data/dataThree'
 import { FaArrowRight, FaRegEnvelope } from 'react-icons/fa'
 import { BsCheckCircle } from 'react-icons/bs'
 import { MdKeyboardArrowRight } from 'react-icons/md'

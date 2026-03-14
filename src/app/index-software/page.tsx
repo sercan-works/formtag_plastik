@@ -13,7 +13,7 @@ import ServiceFaq from '../componets/serviceFaq'
 
 import * as Icon from 'react-feather';
 
-import { hostingAbout } from '../Data/dataThree'
+import { hostingAbout } from 'data/dataThree'
 
 import {HiOutlineCog6Tooth} from "react-icons/hi2"
 import { FaArrowRight, FaRegComments } from 'react-icons/fa'

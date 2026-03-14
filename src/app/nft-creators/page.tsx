@@ -6,7 +6,7 @@ import NftNavbar from '../componets/Navbar/nftNavbar'
 import Footer from '../componets/Footer/footer'
 import Switcher from '../componets/switcher'
 
-import { NftServices } from '../Data/data'
+import { NftServices } from 'data/data'
 import { MdKeyboardArrowRight } from 'react-icons/md'
 
 interface Services{

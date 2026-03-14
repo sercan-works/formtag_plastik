@@ -7,7 +7,7 @@ import {Lightbox} from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import { Fullscreen} from "yet-another-react-lightbox/plugins";
 
-import { portfolio,portfolioImage } from "../../Data/dataTwo";
+import { portfolio,portfolioImage } from "data/dataTwo";
 
 export default function PortfolioItem(){
     let [isOpen, setisOpen] = useState<boolean>(false);

@@ -9,7 +9,7 @@ import Footer from '../../componets/Footer/footer'
 import Switcher from '../../componets/switcher'
 import NftTab from '../../componets/nft/nftTab'
 
-import { nftProdectData } from '../../Data/data'
+import { nftProdectData } from 'data/data'
 
 interface NftData{
     id: number;

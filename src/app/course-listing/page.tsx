@@ -7,7 +7,7 @@ import Footer from '../componets/Footer/footer'
 import Switcher from '../componets/switcher'
 
 
-import { courcesData } from '../Data/data'
+import { courcesData } from 'data/data'
 import { MdKeyboardArrowRight, MdOutlineKeyboardArrowLeft } from 'react-icons/md'
 import { PiBookOpenText } from 'react-icons/pi'
 import { GoClock } from 'react-icons/go'

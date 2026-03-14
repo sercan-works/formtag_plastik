@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import type { Product, ProductFromJson } from './types';
 
-const PRODUCTS_JSON_PATH = path.join(process.cwd(), 'src', 'app', 'Data', 'products.json');
+const PRODUCTS_JSON_PATH = path.join(process.cwd(), 'data', 'products.json');
 const IMAGE_BASE = '/images/products';
 
 function loadProductsJson(): { vitrin: ProductFromJson[]; anasayfa: ProductFromJson[] } {
@@ -19,9 +19,25 @@ function loadProductsJson(): { vitrin: ProductFromJson[]; anasayfa: ProductFromJ
 }
 
 const FALLBACK_IMAGE = '/vercel.svg';
+const PUBLIC_PRODUCTS_DIR = path.join(process.cwd(), 'public', 'images', 'products');
+
+/** Resim değişince önbelleğin kırılması için dosya güncelleme zamanını URL'e ekler */
+function imagePathWithCacheBust(imageValue: string): string {
+  if (!imageValue || imageValue.startsWith('/')) return imageValue || FALLBACK_IMAGE;
+  const basePath = `${IMAGE_BASE}/${imageValue}`;
+  try {
+    const filePath = path.join(PUBLIC_PRODUCTS_DIR, path.basename(imageValue));
+    const stat = fs.statSync(filePath);
+    return `${basePath}?t=${stat.mtimeMs}`;
+  } catch {
+    return basePath;
+  }
+}
 
 function toProduct(p: ProductFromJson): Product {
-  const imagePath = p.image ? `${IMAGE_BASE}/${p.image}` : FALLBACK_IMAGE;
+  const imagePath = !p.image
+    ? FALLBACK_IMAGE
+    : imagePathWithCacheBust(p.image);
   return {
     id: p.id,
     name: p.name,
@@ -42,4 +58,10 @@ export function getVitrinProducts(): Product[] {
 export function getAnasayfaProducts(): Product[] {
   const { anasayfa } = loadProductsJson();
   return anasayfa.map(toProduct);
+}
+
+/** Slider'da gösterilecek ürünler (anasayfa içinde slider: true olanlar) */
+export function getSliderProducts(): Product[] {
+  const { anasayfa } = loadProductsJson();
+  return anasayfa.filter((p) => p.slider === true).map(toProduct);
 }

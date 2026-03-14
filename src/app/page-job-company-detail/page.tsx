@@ -8,7 +8,7 @@ import Switcher from '../componets/switcher'
 import MobileApp from '../componets/mobileApp'
 
 import * as Icon from 'react-feather';
-import {comapnyData} from "../Data/dataThree"
+import {comapnyData} from "data/dataThree"
 
 interface CompanyData{
     icon: Icon.Icon;

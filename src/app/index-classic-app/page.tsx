@@ -19,7 +19,7 @@ import { BiTrendingDown } from "react-icons/bi"
 import { MdKeyboardArrowRight } from "react-icons/md"
 import { BsCheckCircle } from "react-icons/bs"
 
-import { KeyFeaturestwo } from "../Data/data"
+import { KeyFeaturestwo } from "data/data"
 
 export default function Page(){
   return(

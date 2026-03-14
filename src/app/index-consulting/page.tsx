@@ -13,7 +13,7 @@ import CounterOne from "../componets/consulting/counterOne"
 import CounterTwo from "../componets/consulting/counterTwo"
 
 
-import { consultingService,consultingAbout,consultingProduct } from "../Data/dataThree"
+import { consultingService,consultingAbout,consultingProduct } from "data/dataThree"
 
 import { FaArrowRight } from "react-icons/fa"
 import { FiAirplay } from "react-icons/fi"

@@ -9,7 +9,7 @@ import ShopFooter from '../componets/Footer/shopFooter'
 
 import * as Icon from 'react-feather';
 
-import { shopFeature } from '../Data/dataFour'
+import { shopFeature } from 'data/dataFour'
 import { MdKeyboardArrowRight } from 'react-icons/md'
 import { IconType } from 'react-icons'
 

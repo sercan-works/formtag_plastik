@@ -10,7 +10,7 @@ import PhotographyFooter from '../componets/Footer/photographyFooter'
 
 import CountUp from 'react-countup';
 
-import { photoAboutImage } from '../Data/dataFour'
+import { photoAboutImage } from 'data/dataFour'
 import { FaArrowRight } from 'react-icons/fa'
 
 export default function Page(){

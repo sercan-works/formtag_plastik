@@ -7,7 +7,7 @@ import {Lightbox} from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import { Fullscreen} from "yet-another-react-lightbox/plugins";
 
-import { projectData,projectImage } from '../../Data/dataTwo';
+import { projectData,projectImage } from 'data/dataTwo';
 import { FiCamera } from 'react-icons/fi';
 
 export default function PortfolioImage(){

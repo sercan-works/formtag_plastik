@@ -16,8 +16,8 @@ import { MdKeyboardArrowRight } from 'react-icons/md'
 
 import CountUp from 'react-countup'
 
-import { solarAbout, solarBlog, solarPorject } from '../Data/dataFive'
-import { clientsData } from '../Data/data'
+import { solarAbout, solarBlog, solarPorject } from 'data/dataFive'
+import { clientsData } from 'data/data'
 import { IconType } from 'react-icons'
 
 interface AboutData{

@@ -7,7 +7,7 @@ import Switcher from '../componets/switcher'
 
 import { MdKeyboardArrowRight, MdOutlineCheckCircle } from 'react-icons/md'
 import { FiArrowRight, FiBook, FiChevronRight, FiMail, FiMessageCircle, FiUser } from 'react-icons/fi'
-import {servicesData} from '../Data/dataFive'
+import {servicesData} from 'data/dataFive'
 
 import { IconType } from 'react-icons'
 

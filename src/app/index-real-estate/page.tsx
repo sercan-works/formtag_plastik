@@ -14,8 +14,8 @@ import Clients from "../componets/real-estate/clients"
 
 import * as Icon from 'react-feather';
 
-import { propertyData } from "../Data/data"
-import { workData } from "../Data/dataThree"
+import { propertyData } from "data/data"
+import { workData } from "data/dataThree"
 import { LiaCompressArrowsAltSolid } from "react-icons/lia"
 import { LuBath, LuBedDouble } from "react-icons/lu"
 import { FaArrowRight } from "react-icons/fa"

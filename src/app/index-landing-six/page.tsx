@@ -14,7 +14,7 @@ import Footer from "../componets/Footer/footer";
 import CookieModal from "../componets/cookieModal";
 import Switcher from "../componets/switcher";
 
-import {featureFive} from '../Data/data'
+import {featureFive} from 'data/data'
 import { FiChevronRight, FiHexagon } from "react-icons/fi";
 import { FaRegEnvelope } from "react-icons/fa";
 
@@ -137,7 +137,8 @@ export default function Page(){
                                 <div className="relative overflow-hidden text-transparent -m-3">
                                     <FiHexagon className="size-24 fill-indigo-600/5 group-hover:fill-white/10 mx-auto"></FiHexagon>
                                     <div className="absolute top-2/4 -translate-y-2/4 start-0 end-0 mx-auto text-indigo-600 rounded-xl group-hover:text-white duration-500 text-3xl flex align-middle justify-center items-center">
-                                        <Icons className=""></Icons>
+                                        {/* @ts-expect-error icon accepts className */}
+                                    <Icons className=""></Icons>
                                     </div>
                                 </div>
 

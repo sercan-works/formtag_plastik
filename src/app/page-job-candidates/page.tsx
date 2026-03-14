@@ -8,7 +8,7 @@ import Switcher from '../componets/switcher'
 import MobileApp from '../componets/mobileApp'
 
 
-import { candidates } from '../Data/data'
+import { candidates } from 'data/data'
 
 import { MdKeyboardArrowRight } from 'react-icons/md'
 import { RiMapPinLine } from 'react-icons/ri'

@@ -6,7 +6,7 @@ import dynamic from "next/dynamic"
 const TinySlider = dynamic(()=>import('tiny-slider-react'),{ssr: false,});
 import '../../../../node_modules/tiny-slider/dist/tiny-slider.css'
 
-import { jobServices } from '../../Data/data'
+import { jobServices } from 'data/data'
 import { IconType } from 'react-icons';
 
 interface Services{

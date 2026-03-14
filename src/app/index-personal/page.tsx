@@ -13,7 +13,7 @@ import Portfolio from "../componets/portfolio"
 import VideoModal from "../componets/videoModal/videoModal"
 import TextOne from "../componets/textAnimation/textOne"
 
-import { servicesTwo } from "../Data/dataThree"
+import { servicesTwo } from "data/dataThree"
 import { FaArrowRight } from "react-icons/fa"
 import { IconType } from "react-icons"
 

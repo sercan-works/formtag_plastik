@@ -7,7 +7,7 @@ import Switcher from '../componets/switcher'
 import ClientsOne from '../componets/clientsOne'
 import ProjectWork from '../componets/portfolio/projectWork'
 
-import { servicesTwo } from '../Data/dataThree'
+import { servicesTwo } from 'data/dataThree'
 
 import { MdKeyboardArrowRight } from 'react-icons/md'
 import { FiPhone } from 'react-icons/fi'

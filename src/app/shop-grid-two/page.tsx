@@ -9,8 +9,8 @@ import ShopFooter from '../componets/Footer/shopFooter'
 
 import * as Icon from 'react-feather';
 
-import { productData } from '../Data/data'
-import { shopGrid } from '../Data/dataFour'
+import { productData } from 'data/data'
+import { shopGrid } from 'data/dataFour'
 import { MdKeyboardArrowRight, MdOutlineKeyboardArrowLeft } from 'react-icons/md'
 
 export default function Page(){

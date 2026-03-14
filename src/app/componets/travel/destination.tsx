@@ -3,7 +3,7 @@ import React, {useState,} from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
-import { destinationData } from '../../Data/dataTwo'
+import { destinationData } from 'data/dataTwo'
 
 interface DestinationData{
     image: string;

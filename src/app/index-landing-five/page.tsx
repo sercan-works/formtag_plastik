@@ -15,7 +15,7 @@ import Blog from '../componets/blog'
 import VideoModal from '../componets/videoModal/videoModal'
 import VideoModalTwo from '../componets/videoModal/videoModalTwo'
 
-import { featureOne } from '../Data/dataThree'
+import { featureOne } from 'data/dataThree'
 import { FaArrowRight } from 'react-icons/fa'
 import { MdKeyboardArrowRight } from 'react-icons/md'
 import { Icon } from 'react-feather'

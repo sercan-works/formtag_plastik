@@ -11,8 +11,8 @@ import NftProduct from '../componets/nft/nftProduct'
 
 import * as Icon from 'react-feather';
 
-import { NFTAboutData } from '../Data/data';
-import { nftCollection } from '../Data/data'
+import { NFTAboutData } from 'data/data';
+import { nftCollection } from 'data/data'
 import { FaArrowRight } from 'react-icons/fa'
 import { IconType } from 'react-icons'
 import { FiArrowRight } from 'react-icons/fi'

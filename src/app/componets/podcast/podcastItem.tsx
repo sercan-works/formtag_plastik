@@ -6,7 +6,7 @@ import dynamic from 'next/dynamic';
 
 const TinySlider = dynamic(()=>import('tiny-slider-react'), {ssr:false});
 
-import { podcastData } from '../../Data/dataTwo';
+import { podcastData } from 'data/dataTwo';
 import { FaArrowRight } from 'react-icons/fa';
 
 interface PodCastData{

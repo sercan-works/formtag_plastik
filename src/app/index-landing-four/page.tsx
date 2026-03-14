@@ -14,7 +14,7 @@ import VideoModal from '../componets/videoModal/videoModal'
 import VideoModalThree from '../componets/videoModal/videoModalThree'
 
 import * as Icon from 'react-feather';
-import { featureOne } from '../Data/dataThree'
+import { featureOne } from 'data/dataThree'
 import { FaArrowRight } from 'react-icons/fa'
 import { MdKeyboardArrowRight } from 'react-icons/md'
 

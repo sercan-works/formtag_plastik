@@ -12,7 +12,7 @@ import Product from '../componets/furniture/product'
 
 import * as Icon from 'react-feather';
 
-import { furnitureItem, featuredcollections, furnitureServices} from '../Data/dataThree'
+import { furnitureItem, featuredcollections, furnitureServices} from 'data/dataThree'
 import { FaArrowRight } from 'react-icons/fa'
 
 interface FurnitureData{

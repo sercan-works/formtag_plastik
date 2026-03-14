@@ -11,8 +11,8 @@ import {Lightbox} from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import { Fullscreen} from "yet-another-react-lightbox/plugins";
 
-import { restaurentData } from '../../Data/data'
-import { foodImage } from '../../Data/dataTwo'
+import { restaurentData } from 'data/data'
+import { foodImage } from 'data/dataTwo'
 
 interface RestaurentData{
     id?: number | undefined;

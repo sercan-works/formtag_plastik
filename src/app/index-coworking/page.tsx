@@ -15,7 +15,7 @@ import Contact from '../componets/co-working/contact'
 
 import * as Icon from 'react-feather';
 
-import { coworkAbout } from '../Data/dataThree'
+import { coworkAbout } from 'data/dataThree'
 import { MdKeyboardArrowRight } from 'react-icons/md'
 
 export default function Page(){

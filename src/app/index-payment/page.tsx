@@ -11,7 +11,7 @@ import CompanyLogo from '../componets/companyLogo'
 import ClientsOne from '../componets/clientsOne'
 
 
-import { paymentFeature } from '../Data/dataThree'
+import { paymentFeature } from 'data/dataThree'
 import { FaArrowRight } from 'react-icons/fa'
 import { BsCheckCircle } from 'react-icons/bs'
 import { MdKeyboardArrowRight } from 'react-icons/md'

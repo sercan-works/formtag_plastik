@@ -3,7 +3,7 @@ import React, { useState} from 'react'
 import Link from "next/link"
 import Image from "next/image"
 
-import { coworkTab } from '../../Data/dataTwo'
+import { coworkTab } from 'data/dataTwo'
 import { FaArrowRight } from 'react-icons/fa'
 
 interface WorkData{

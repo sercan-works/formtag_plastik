@@ -9,7 +9,7 @@ import Footer from "../componets/Footer/footer"
 
 import * as Icon from 'react-feather';
 
-import { accordionData } from '../Data/dataTwo';
+import { accordionData } from 'data/dataTwo';
 
 import { MdKeyboardArrowDown, MdKeyboardArrowLeft, MdKeyboardArrowRight, MdOutlineCalendarMonth } from "react-icons/md";
 import { AiOutlineAndroid, AiOutlineCheckCircle, AiOutlineExclamationCircle, AiOutlineInfoCircle, AiOutlinePieChart, AiOutlineSetting } from "react-icons/ai";

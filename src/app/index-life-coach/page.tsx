@@ -11,7 +11,7 @@ import Footer from "../componets/Footer/footer";
 import Switcher from "../componets/switcher";
 import CookieModal from "../componets/cookieModal";
 
-import { coachServices, cources } from "../Data/data";
+import { coachServices, cources } from "data/data";
 import { LuBookOpen } from "react-icons/lu";
 import { FiArrowRight, FiClock, FiEye } from "react-icons/fi";
 

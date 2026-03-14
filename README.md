@@ -13,7 +13,7 @@ Tarayıcıda [http://localhost:3000](http://localhost:3000) açın.
 
 ## Ürünler (JSON + yerel görseller)
 
-Veritabanı yok; ürünler **`src/app/Data/products.json`** dosyasından okunur.
+Veritabanı yok; ürünler **`data/products.json`** dosyasından okunur (ana dizinde `data` klasörü).
 
 ### JSON yapısı
 
@@ -28,7 +28,9 @@ Her ürün: `id`, `name`, `code`, `category`, `description`, **`image`** (sadece
 - JSON’da sadece **dosya adını** yazın (örn. `"image": "urun-1.jpg"`).
 - Örnek: `public/images/products/urun-1.jpg` → JSON’da `"image": "urun-1.jpg"`.
 
-### Örnek `products.json`
+Dosya yolu: **`data/products.json`** (proje ana dizininde `data` klasörü).
+
+### Örnek `data/products.json`
 
 ```json
 {

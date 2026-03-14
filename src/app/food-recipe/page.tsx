@@ -11,7 +11,7 @@ import BlogMasonry from '../componets/food/blogMasonry'
 
 import * as Icon from 'react-feather';
 
-import { foodComment } from '../Data/dataTwo'
+import { foodComment } from 'data/dataTwo'
 import { MdOutlineCalendarMonth } from 'react-icons/md'
 
 interface Comments{

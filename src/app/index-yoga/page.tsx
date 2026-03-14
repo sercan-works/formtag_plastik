@@ -13,7 +13,7 @@ import YogaImages from '../componets/yoga/yogaImages'
 
 import * as Icon from 'react-feather';
 
-import { meditationData,yogaTeam,workData } from '../Data/data'
+import { meditationData,yogaTeam,workData } from 'data/data'
 import { FaArrowRight } from 'react-icons/fa'
 import { BsCheckCircle } from 'react-icons/bs'
 

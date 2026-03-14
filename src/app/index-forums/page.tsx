@@ -10,7 +10,7 @@ import CookieModal from '../componets/cookieModal'
 
 import * as Icon from 'react-feather';
 
-import { forumData } from '../Data/dataThree'
+import { forumData } from 'data/dataThree'
 import { FaRegComment } from 'react-icons/fa'
 import { LuSearch } from 'react-icons/lu'
 import { GoClock } from 'react-icons/go'

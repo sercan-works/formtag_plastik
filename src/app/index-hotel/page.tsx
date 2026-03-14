@@ -12,7 +12,7 @@ import CompanyLogo from '../componets/companyLogo'
 import VideoModalThree from '../componets/videoModal/videoModalThree'
 import BlogTwo from '../componets/blogTwo'
 
-import { hotelData } from '../Data/data'
+import { hotelData } from 'data/data'
 
 import { BsCheckCircle } from 'react-icons/bs'
 import { FaRegEnvelope } from 'react-icons/fa'

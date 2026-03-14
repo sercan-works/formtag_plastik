@@ -2,7 +2,7 @@
 import React from "react"
 import Link from "next/link"
 import {MdKeyboardArrowRight} from "react-icons/md"
-import { KeyFeatures } from "../Data/data";
+import { KeyFeatures } from "data/data";
 import { Icon } from "react-feather";
 
 interface Feature{

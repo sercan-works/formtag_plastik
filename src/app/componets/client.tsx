@@ -3,7 +3,7 @@ import React from 'react'
 import Link from "next/link"
 import Image from "next/image"
 
-import { clientsData } from '../Data/dataTwo'
+import { clientsData } from 'data/dataTwo'
 
 interface ClientData{
     image: string;

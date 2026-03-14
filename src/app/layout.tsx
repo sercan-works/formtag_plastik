@@ -2,6 +2,7 @@
 import "../app/assets/css/tailwind.css"
 import './assets/css/material.css'
 import { Nunito, Work_Sans, EB_Garamond, Kaushan_Script, Alex_Brush } from 'next/font/google'
+import WhatsAppButton from './componets/WhatsAppButton'
 
 
 const nunito = Nunito({
@@ -52,7 +53,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" dir="LTR" className="light">
-      <body className={`${nunito.variable} ${work_sans.variable} ${eb_garamond.variable} ${kaushan.variable} ${alex.variable} font-nunito text-base text-black dark:text-white dark:bg-slate-900`}>{children}</body>
+      <body className={`${nunito.variable} ${work_sans.variable} ${eb_garamond.variable} ${kaushan.variable} ${alex.variable} font-nunito text-base text-black dark:text-white dark:bg-slate-900`}>
+        {children}
+        <WhatsAppButton />
+      </body>
     </html>
   );
 }

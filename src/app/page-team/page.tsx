@@ -9,7 +9,7 @@ import GetInTuct from '../componets/getInTuch'
 
 import * as Icon from 'react-feather';
 
-import { teamData } from '../Data/data'
+import { teamData } from 'data/data'
 import { MdKeyboardArrowRight } from 'react-icons/md'
 import { FaRegEnvelope } from 'react-icons/fa'
 

@@ -12,20 +12,12 @@ import BlogComment from "../../componets/blogComment";
 
 
 import {MdKeyboardArrowRight} from "react-icons/md"
-import { blogData } from "../../Data/data";
+import { blogData, type BlogData } from "data/data";
 import { useParams } from "next/navigation";
 
-interface BlogData{
-    id: number;
-    Image: string;
-    title: string;
-    desc: string;
-    date: string;
-}
-
 export default function Page(){
-    const params = useParams();
-    const id = parseInt(String(params?.id || 0))
+    const params = useParams<{ id: string }>();
+    const id = parseInt(params?.id ?? '0', 10);
     const blogDatas:BlogData | undefined = blogData.find((blog)=>blog?.id === id);
     return(
         <>

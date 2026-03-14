@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 
-import { timeData } from '../../Data/data'
+import { timeData } from 'data/data'
 
 interface TimeData{
     time: string;

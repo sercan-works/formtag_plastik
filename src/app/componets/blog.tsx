@@ -2,7 +2,7 @@
 import React from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { blogData } from "../Data/data"
+import { blogData } from "data/data"
 
 import { FaArrowRight } from "react-icons/fa"
 

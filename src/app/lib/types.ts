@@ -6,6 +6,8 @@ export interface ProductFromJson {
   description?: string | null;
   image: string;
   category: string;
+  /** true ise anasayfadaki slider'da gösterilir */
+  slider?: boolean;
 }
 
 /** Sayfada kullanılan ürün (image tam path) */

@@ -11,7 +11,7 @@ import MobileApp from '../componets/mobileApp'
 import CompanyLogo from '../componets/companyLogo'
 
 
-import { servicesOne ,pricingTwo} from '../Data/dataThree'
+import { servicesOne ,pricingTwo} from 'data/dataThree'
 
 import { FaArrowRight } from 'react-icons/fa'
 import { BsCheckCircle } from 'react-icons/bs'

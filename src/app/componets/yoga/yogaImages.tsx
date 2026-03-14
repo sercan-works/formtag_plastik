@@ -11,7 +11,7 @@ import {Lightbox} from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import { Fullscreen} from "yet-another-react-lightbox/plugins";
 
-import { yogaImage } from '../../Data/dataTwo'
+import { yogaImage } from 'data/dataTwo'
 
 export default function YogaImages(){
     let settings = {

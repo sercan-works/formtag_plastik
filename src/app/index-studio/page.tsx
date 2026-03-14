@@ -15,7 +15,7 @@ import HeroSlider from '../componets/studio/heroSlider'
 import Tab from '../componets/studio/tab'
 import Portfolio from '../componets/studio/portfolio'
 
-import { studioAbout } from '../Data/dataThree'
+import { studioAbout } from 'data/dataThree'
 import { FaArrowRight } from 'react-icons/fa'
 import { MdKeyboardArrowRight } from 'react-icons/md'
 import { IconType } from 'react-icons'

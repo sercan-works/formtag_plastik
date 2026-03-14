@@ -15,9 +15,9 @@ import CompanyLogo from '../componets/companyLogo'
 import * as Icon from 'react-feather';
 
 
-import { courcesData } from '../Data/data'
+import { courcesData } from 'data/data'
 
-import { courseFeature,studentData } from '../Data/dataThree'
+import { courseFeature,studentData } from 'data/dataThree'
 
 import { FaArrowRight } from 'react-icons/fa'
 import { PiBookOpenText } from 'react-icons/pi'

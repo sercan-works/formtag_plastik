@@ -1,0 +1,19 @@
+{
+  "hero_title": "Hakkımızda",
+  "hero_subtitle": "Ambalaj ve etiket üretiminde güvenilir çözüm ortağınız.",
+  "hero_banner_image": "/images/company/aboutus.jpg",
+  "story_title": "Biz Kimiz?",
+  "story_paragraph_1": "Formtag Plastik olarak yıllardır gıda, kozmetik, temizlik ve endüstriyel sektörlere yönelik etiket ve ambalaj ürünleri üretiyoruz. Müşteri memnuniyetini ön planda tutarak, kaliteli hammadde ve modern üretim tesisimizle ihtiyacınıza özel çözümler sunuyoruz.",
+  "story_paragraph_2": "Sektördeki deneyimimiz ve uzman kadromuzla, küçük ölçekli siparişlerden toplu üretim taleplerine kadar esnek ve güvenilir bir tedarik zinciri sunuyoruz. Kalite kontrol süreçlerimizle her ürünün standartlara uygunluğunu garanti ediyoruz.",
+  "story_images": [
+    "/images/products/1.jpg",
+    "/images/products/2.jpg",
+    "/images/products/3.jpg"
+  ],
+  "story_image_alt": "Formtag Plastik üretim tesisleri",
+  "values_title": "Değerlerimiz",
+  "values_subtitle": "Formtag Plastik olarak bu ilkelerle çalışıyoruz.",
+  "cta_title": "Sorularınız mı var?",
+  "cta_text": "Ürünlerimiz ve hizmetlerimiz hakkında bilgi almak için bizimle iletişime geçin.",
+  "cta_button": "İletişime Geçin"
+}

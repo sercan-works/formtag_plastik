@@ -1,0 +1,95 @@
+{
+  
+  "anasayfa": [
+    {
+      "id": "1",
+      "name": "Formtag Plastik Etiket 50x30",
+      "category": "Plastik Etiket",
+      "image": "1.jpg",
+      "description": "Endüstriyel kullanıma uygun, yüksek dayanımlı plastik etiket.",
+      "code": "FP-50x30",
+      "slider": true
+    },
+    {
+      "id": "2",
+      "name": "Formtag PVC Etiket Rulo",
+      "category": "PVC Etiket",
+      "image": "2.jpg",
+      "description": "Isıya ve neme dayanıklı PVC etiket rulosu.",
+      "code": "FP-PVC-RL",
+      "slider": true
+    },
+    { 
+      "id": "3",
+      "name": "Formtag Uyarı Etiketi",
+      "category": "Uyarı Etiketi",
+      "image": "3.jpg",
+      "description": "Makine ve ekipmanlar için uyarı ve bilgi etiketleri.",
+      "code": "FP-WARN",
+      "slider": true
+    },
+    {
+      "id": "4",
+      "name": "Formtag Uyarı Etiketi",
+      "category": "Uyarı Etiketi",
+      "image": "4.jpg",
+      "description": "Makine ve ekipmanlar için uyarı ve bilgi etiketleri.",
+      "code": "FP-WARN",
+      "slider": true
+    },
+    {
+      "id": "5",
+      "name": "Formtag Uyarı Etiketi",
+      "category": "Uyarı Etiketi",
+      "image": "5.jpg",
+      "description": "Makine ve ekipmanlar için uyarı ve bilgi etiketleri.",
+      "code": "FP-WARN",
+      "slider": true
+    },
+    {
+      "id": "6",
+      "name": "Formtag Uyarı Etiketi",
+      "category": "Uyarı Etiketi",
+      "image": "6.jpg",
+      "description": "Makine ve ekipmanlar için uyarı ve bilgi etiketleri.",
+      "code": "FP-WARN",
+      "slider": true
+    },
+    {
+      "id": "7",
+      "name": "Formtag Uyarı Etiketi",
+      "category": "Uyarı Etiketi",
+      "image": "7.jpg",
+      "description": "Makine ve ekipmanlar için uyarı ve bilgi etiketleri.",
+      "code": "FP-WARN",
+      "slider": true
+    },
+    {
+      "id": "8",
+      "name": "Formtag Uyarı Etiketi",
+      "category": "Uyarı Etiketi",
+      "image": "8.jpg",
+      "description": "Makine ve ekipmanlar için uyarı ve bilgi etiketleri.",
+      "code": "FP-WARN",
+      "slider": true
+    },
+    {
+      "id": "9",
+      "name": "Formtag Uyarı Etiketi",
+      "category": "Uyarı Etiketi",
+      "image": "9.jpg",
+      "description": "Makine ve ekipmanlar için uyarı ve bilgi etiketleri.",
+      "code": "FP-WARN",
+      "slider": true
+    },
+    {
+      "id": "10",
+      "name": "Formtag Uyarı Etiketi",
+      "category": "Uyarı Etiketi",
+      "image": "10.jpg",
+      "description": "Makine ve ekipmanlar için uyarı ve bilgi etiketleri.",
+      "code": "FP-WARN",
+      "slider": true
+    }
+  ]
+}

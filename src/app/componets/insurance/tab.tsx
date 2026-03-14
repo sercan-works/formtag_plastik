@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import Link from "next/link"
 import Image from "next/image"
 
-import { insuranceTab } from '../../Data/dataTwo'
+import { insuranceTab } from 'data/dataTwo'
 import { FaArrowRight } from 'react-icons/fa'
 
 interface Insurance{

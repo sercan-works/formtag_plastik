@@ -9,8 +9,8 @@ import CookieModal from '../componets/cookieModal'
 import ClientsOne from '../componets/clientsOne'
 import VideoModal from '../componets/videoModal/videoModal'
 
-import { KeyFeaturestwo } from '../Data/data'
-import { watchAbout } from '../Data/dataThree'
+import { KeyFeaturestwo } from 'data/data'
+import { watchAbout } from 'data/dataThree'
 
 import * as Icon from 'react-feather';
 import { MdKeyboardArrowRight } from 'react-icons/md'

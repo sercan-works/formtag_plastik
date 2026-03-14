@@ -1,7 +1,7 @@
 "use client"
 import React, {useReducer} from 'react'
 import { Link } from 'react-scroll';
-import { accordionData } from '../Data/dataTwo';
+import { accordionData } from 'data/dataTwo';
 
 interface AccordionData{
     id: number;

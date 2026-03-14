@@ -3,7 +3,7 @@ import React from 'react'
 import Link from "next/link"
 import Image from "next/image"
 
-import { foodBlogData } from '@/app/Data/dataTwo'
+import { foodBlogData } from 'data/dataTwo'
 import { LuCalendarDays } from 'react-icons/lu'
 
 interface BlogData{

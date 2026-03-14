@@ -2,7 +2,7 @@
 import React from "react"
 import dynamic from "next/dynamic"
 import Image from "next/image"
-import { clientsData } from "../Data/data"
+import { clientsData } from "data/data"
 
 interface ClientData{
     description: string;

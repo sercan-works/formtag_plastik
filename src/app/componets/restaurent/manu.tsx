@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import Link from "next/link"
 import Image from "next/image"
 
-import { restaurentData } from '../../Data/data'
+import { restaurentData } from 'data/data'
 
 interface RestaurentData {
     id?: number | undefined;

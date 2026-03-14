@@ -8,7 +8,7 @@ import MobileApp from '../../componets/mobileApp'
 import ShopFooter from '../../componets/Footer/shopFooter'
 import ProductDetail from '../../componets/shop/productDetailOne'
 
-import { productData } from '../../Data/data'
+import { productData } from 'data/data'
 import { MdKeyboardArrowRight } from 'react-icons/md'
 
 interface ProductData{

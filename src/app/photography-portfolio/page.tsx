@@ -14,7 +14,7 @@ import {Lightbox} from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import { Fullscreen} from "yet-another-react-lightbox/plugins";
 
-import { photoPortfolio,photoPortfolioImage } from '../Data/dataFour'
+import { photoPortfolio,photoPortfolioImage } from 'data/dataFour'
 
 interface PortfolioData{
     id: number;

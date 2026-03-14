@@ -13,7 +13,7 @@ import Cta from '../componets/cta'
 import Portfolio from '../componets/portfolio'
 
 
-import { servicesTwo } from '../Data/dataThree'
+import { servicesTwo } from 'data/dataThree'
 import { FaArrowRight } from 'react-icons/fa'
 import BlogTwo from '../componets/blogTwo'
 

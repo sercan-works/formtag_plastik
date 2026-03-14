@@ -10,7 +10,7 @@ import ClientsOne from '../componets/clientsOne'
 import VideoModal from '../componets/videoModal/videoModal'
 import MarketingCounter from '../componets/counter/marketingCounter'
 
-import { contactData } from '../Data/data'
+import { contactData } from 'data/data'
 
 import * as Icon from 'react-feather';
 import { FaArrowRight } from 'react-icons/fa'

@@ -4,7 +4,7 @@ import React, { useState,useEffect } from 'react'
 import Link from "next/link"
 import Image from "next/image"
 
-import { nftProdectData } from '../../Data/data'
+import { nftProdectData } from 'data/data'
 import { GoClock } from 'react-icons/go'
 import { MdOutlineRestartAlt } from 'react-icons/md'
 

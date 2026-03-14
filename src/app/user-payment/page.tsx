@@ -9,7 +9,7 @@ import AccountTab from '../componets/accountTab'
 import PaymentModal from '../componets/paymentModal'
 
 import * as Icon from 'react-feather';
-import { paymentMethod } from '../Data/dataFour'
+import { paymentMethod } from 'data/dataFour'
 
 export default function Page(){
       

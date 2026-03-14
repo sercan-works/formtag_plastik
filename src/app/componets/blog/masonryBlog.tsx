@@ -3,17 +3,8 @@ import React, {useState} from 'react'
 import Link from "next/link"
 import Image from "next/image"
 
-import { masonryData } from '../../Data/dataTwo'
+import { masonryData, type MasonryData } from 'data/dataTwo'
 import { FaArrowRight } from 'react-icons/fa'
-
-interface MasonryData{
-    id: number;
-    image: string;
-    title: string;
-    desc: string;
-    category: string;
-    date: string;
-}
 
 export default function MasonryBlog(){
     let [selectedCategory, setSelectedCategory] = useState<null | string>(null);

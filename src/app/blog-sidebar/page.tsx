@@ -7,7 +7,7 @@ import Footer from '../componets/Footer/footer'
 import Switcher from '../componets/switcher'
 import BlogUserDetail from '../componets/blogUserDetail'
 
-import { blogData } from '../Data/data'
+import { blogData } from 'data/data'
 import { MdKeyboardArrowRight, MdOutlineKeyboardArrowLeft } from 'react-icons/md'
 import { FaArrowRight } from 'react-icons/fa'
 

@@ -15,7 +15,7 @@ import VideoModalTwo from '../componets/videoModal/videoModalTwo'
 
 import * as Icon from 'react-feather';
 
-import { lowClient } from '../Data/dataThree'
+import { lowClient } from 'data/dataThree'
 
 import { LiaAwardSolid, LiaMoneyBillAltSolid, LiaUniversitySolid } from 'react-icons/lia'
 import { BsCheckCircle } from 'react-icons/bs'

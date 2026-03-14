@@ -16,8 +16,8 @@ import {Lightbox} from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import { Fullscreen} from "yet-another-react-lightbox/plugins";
 
-import { cafeData,clientsData,blogData,service2 } from '../Data/data'
-import { cafeImage } from '../Data/dataThree'
+import { cafeData,clientsData,blogData,service2 } from 'data/data'
+import { cafeImage } from 'data/dataThree'
 import { FaArrowRight } from 'react-icons/fa'
 
 interface CafaeData{

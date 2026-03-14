@@ -19,9 +19,9 @@ import { RiHospitalLine } from 'react-icons/ri'
 import { AiOutlineClockCircle } from 'react-icons/ai'
 import { FaArrowRight } from 'react-icons/fa'
 
-import { teamData } from '../Data/data'
+import { teamData } from 'data/data'
 
-import { hospitalServices } from '../Data/dataThree'
+import { hospitalServices } from 'data/dataThree'
 import { IconType } from 'react-icons'
 
 interface TeamData{

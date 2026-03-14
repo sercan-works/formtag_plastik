@@ -2,7 +2,7 @@
 import React  from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { teamData } from "../Data/data"
+import { teamData } from "data/data"
 import * as Icon from 'react-feather';
 
 interface TeamData{

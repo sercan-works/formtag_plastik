@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image'
 
 import CountUp from 'react-countup';
-import { cleaningServices, cleanerCounter, clenerServices, clenerTeam, clenerBlog } from '../Data/dataFive';
+import { cleaningServices, cleanerCounter, clenerServices, clenerTeam, clenerBlog } from 'data/dataFive';
 
 import { FiArrowRight, FiFacebook, FiThumbsUp, FiUserCheck, FiInstagram, FiLinkedin } from "react-icons/fi";
 

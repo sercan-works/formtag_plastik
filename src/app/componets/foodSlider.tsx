@@ -11,7 +11,7 @@ import { Lightbox } from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import { Fullscreen} from "yet-another-react-lightbox/plugins";
 
-import { foodImage } from '../Data/dataTwo'
+import { foodImage } from 'data/dataTwo'
 
 const settings2 = {
     container: '.tiny-twelve-item',
@@ -87,11 +87,6 @@ export default function FoodSlider(){
                         plugins={[Fullscreen]} // Optional plugins
                     />
                 )}
-                <div className="absolute top-2/4 -translate-y-2/4 start-2/4 ltr:-translate-x-2/4 rtl:translate-x-2/4 text-center hidden md:block">
-                    <span className="py-2 px-5 inline-block font-semibold tracking-wide align-middle text-base text-center bg-slate-900/70 text-white rounded-md">
-                        Formtag Plastik Ürün Galerisi
-                    </span>
-                </div>
             </div>
         </div>
     )

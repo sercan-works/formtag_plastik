@@ -7,7 +7,7 @@ import Switcher from '../componets/switcher'
 import MobileApp from '../componets/mobileApp'
 import ShopFooter from '../componets/Footer/shopFooter'
 
-import { productData } from '../Data/data'
+import { productData } from 'data/data'
 import { MdKeyboardArrowRight, MdOutlineKeyboardArrowLeft } from 'react-icons/md'
 
 interface ProductData{

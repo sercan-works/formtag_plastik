@@ -13,8 +13,8 @@ import Faq from '../componets/hosting/Faq'
 
 import * as Icon from 'react-feather';
 
-import { hosting } from '../Data/data'
-import { hostingAbout } from '../Data/dataThree'
+import { hosting } from 'data/data'
+import { hostingAbout } from 'data/dataThree'
 
 import { BsCheckCircle } from 'react-icons/bs'
 import { MdKeyboardArrowRight } from 'react-icons/md'

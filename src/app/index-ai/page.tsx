@@ -11,7 +11,7 @@ import Switcher from '../componets/switcher';
 import FooterTransparent from '../componets/Footer/transparentFooter';
 
 import { TypeAnimation } from 'react-type-animation';
-import { accordionData } from '../Data/dataTwo';
+import { accordionData } from 'data/dataTwo';
 import { FaArrowRight, FaRegEnvelope } from 'react-icons/fa';
 import { MdKeyboardArrowRight } from 'react-icons/md';
 import { BsCheckCircle } from 'react-icons/bs';

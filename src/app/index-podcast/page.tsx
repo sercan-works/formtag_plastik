@@ -12,7 +12,7 @@ import HeroSection from '../componets/podcast/heroSection';
 import PodcastItem from '../componets/podcast/podcastItem';
 
 
-import { podcastCat } from '../Data/dataThree';
+import { podcastCat } from 'data/dataThree';
 import { BiArrowToLeft, BiArrowToRight, BiBookmark } from 'react-icons/bi';
 import { TbPlayerPause } from 'react-icons/tb';
 import { BsCheckCircle } from 'react-icons/bs';

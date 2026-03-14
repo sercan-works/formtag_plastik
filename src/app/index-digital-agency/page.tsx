@@ -16,7 +16,7 @@ import {MdKeyboardArrowRight} from "react-icons/md"
 import {FiPhone} from "react-icons/fi"
 import { FaArrowRight } from 'react-icons/fa'
 
-import { digitalServices,digitalProduct } from '../Data/data'
+import { digitalServices,digitalProduct } from 'data/data'
 import { IconType } from 'react-icons'
 
 interface Services{

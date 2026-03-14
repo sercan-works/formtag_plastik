@@ -14,7 +14,7 @@ import VideoModalThree from "../componets/videoModal/videoModalThree"
 
 import * as Icon from 'react-feather';
 
-import { saasFeatures } from "../Data/dataThree"
+import { saasFeatures } from "data/dataThree"
 
 import { BsCheckCircle } from "react-icons/bs"
 import { MdKeyboardArrowRight } from "react-icons/md"

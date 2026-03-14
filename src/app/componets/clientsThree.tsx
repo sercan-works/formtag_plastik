@@ -2,7 +2,7 @@
 import React from "react"
 import dynamic from "next/dynamic"
 import Image from "next/image"
-import { clientsData } from "../Data/data"
+import { clientsData } from "data/data"
 
 const TinySlider = dynamic(()=>import('tiny-slider-react'),{ssr: false,});
 import '../../../node_modules/tiny-slider/dist/tiny-slider.css'

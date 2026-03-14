@@ -11,7 +11,7 @@ import Manu from '../componets/restaurent/manu'
 import FoodItem from '../componets/restaurent/foodItem'
 
 import {IoRestaurantOutline} from "react-icons/io5"
-import { restaurentAboutData } from '../Data/data';
+import { restaurentAboutData } from 'data/data';
 import { FaArrowRight } from 'react-icons/fa'
 
 
@@ -66,6 +66,7 @@ export default function Page(){
                         return(
                             <div key={index} className="md:px-6 transition duration-500 rounded-2xl text-center">
                                 <div className="w-20 h-20 bg-indigo-600/5 mx-auto text-indigo-600 rounded-xl text-3xl flex align-middle justify-center items-center shadow-xs dark:shadow-gray-800">
+                                    {/* @ts-expect-error icon accepts className */}
                                     <Icons className='w-8 h-8'/>
                                 </div>
     

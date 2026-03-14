@@ -8,7 +8,7 @@ import Switcher from '../componets/switcher'
 import CookieModal from '../componets/cookieModal'
 
 import * as Icon from 'react-feather';
-import { RecentPostData,topicsData } from '../Data/dataTwo'
+import { RecentPostData,topicsData } from 'data/dataTwo'
 import { MdKeyboardArrowRight } from 'react-icons/md'
 import { FaRegComments } from 'react-icons/fa'
 

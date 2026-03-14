@@ -8,7 +8,7 @@ import MobileApp from '../componets/mobileApp';
 
 import * as Icon from 'react-feather';
 
-import { desc1,desc2,desc3,desc4 } from '../Data/dataFour';
+import { desc1,desc2,desc3,desc4 } from 'data/dataFour';
 import { RiMapPinLine } from 'react-icons/ri';
 import { MdKeyboardArrowRight } from 'react-icons/md';
 

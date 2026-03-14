@@ -1,6 +1,6 @@
 "use client"
 import React,{useState} from "react"
-import { accordionData } from "@/app/Data/dataTwo";
+import { accordionData } from "data/dataTwo";
 
 interface AccordionData{
     id: number;

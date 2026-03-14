@@ -15,7 +15,7 @@ import ServiceFaq from '../componets/serviceFaq'
 import * as Icon from 'react-feather';
 
 
-import { discoverData } from '../Data/dataThree'
+import { discoverData } from 'data/dataThree'
 import { IconType } from 'react-icons'
 
 interface DiscoverData{

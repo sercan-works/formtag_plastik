@@ -10,7 +10,7 @@ import ServiceFaq from '../componets/serviceFaq';
 import PricingTab from '../componets/pricingTab';
 
 
-import { startAbout } from '../Data/dataThree';
+import { startAbout } from 'data/dataThree';
 import { MdKeyboardArrowRight } from 'react-icons/md';
 import { IconType } from 'react-icons';
 

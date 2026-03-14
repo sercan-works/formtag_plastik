@@ -12,7 +12,7 @@ import Form from '../componets/job/form'
 import Categories from '../componets/job/categories'
 import JobCounter from '../componets/job/jobCounter'
 
-import { jobData } from '../Data/data'
+import { jobData } from 'data/data'
 import { FaArrowRight } from 'react-icons/fa'
 import { GoClock } from 'react-icons/go'
 import { AiOutlineDollar } from 'react-icons/ai'

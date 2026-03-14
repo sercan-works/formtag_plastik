@@ -11,7 +11,7 @@ import Counter from '../componets/charity/counter'
 import Cta from '../componets/charity/cta'
 
 import * as Icon from 'react-feather';
-import { ourCausesData,teamData } from '../Data/data'
+import { ourCausesData,teamData } from 'data/data'
 import { BiDollarCircle } from 'react-icons/bi'
 
 interface CausesData{

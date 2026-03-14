@@ -13,8 +13,8 @@ import { Fullscreen} from "yet-another-react-lightbox/plugins";
 import {MdKeyboardArrowRight,MdOutlineKeyboardArrowLeft} from "react-icons/md"
 import {FiCamera} from "react-icons/fi"
 
-import { portfolioOne } from '../Data/data';
-import { portfolioOneImage } from '../Data/data';
+import { portfolioOne } from 'data/data';
+import { portfolioOneImage } from 'data/data';
 
 interface PortfolioData{
     id: number;

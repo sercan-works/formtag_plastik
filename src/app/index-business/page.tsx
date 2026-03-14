@@ -16,7 +16,7 @@ import Blog from "../componets/blog"
 import VideoModal from "../componets/videoModal/videoModal"
 import Cta from "../componets/cta"
 
-import { businessAbout,PricingData } from "../Data/dataThree"
+import { businessAbout,PricingData } from "data/dataThree"
 import { FaArrowRight } from "react-icons/fa"
 import { BsCheckCircle } from "react-icons/bs"
 import { Icon } from "react-feather"

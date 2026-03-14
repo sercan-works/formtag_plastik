@@ -11,7 +11,7 @@ import Destination from '../componets/travel/destination';
 import Faq from '../componets/travel/faq';
 import Counter from '../componets/travel/counter';
 
-import { travelBenefit } from '../Data/dataThree';
+import { travelBenefit } from 'data/dataThree';
 
 import { LuCalendarDays, LuSearch } from 'react-icons/lu';
 import { TbCurrencyDollar } from 'react-icons/tb';

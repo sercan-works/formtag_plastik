@@ -8,7 +8,7 @@ import Switcher from '../componets/switcher';
 import * as Icon from 'react-feather';
 
 
-import { helpData } from '../Data/dataTwo';
+import { helpData } from 'data/dataTwo';
 import { MdKeyboardArrowRight } from 'react-icons/md';
 import { FaArrowRight } from 'react-icons/fa';
 import { IconType } from 'react-icons';

@@ -8,8 +8,8 @@ import {Lightbox} from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import { Fullscreen} from "yet-another-react-lightbox/plugins";
 
-import { masonryimages } from '../Data/data'
-import { mesonaryData } from '../Data/data'
+import { masonryimages } from 'data/data'
+import { mesonaryData } from 'data/data'
 
 export default function PortfolioDetailFilter({columns}:{columns:string}) {
 

@@ -10,7 +10,7 @@ import MobileApp from '../../componets/mobileApp'
 import PortfolioImage from '../../componets/portfolio/portfolioImage'
 
 import * as Icon from 'react-feather';
-import { candidates } from '../../Data/data'
+import { candidates } from 'data/data'
 import { useParams } from 'next/navigation'
 
 interface Candidate{

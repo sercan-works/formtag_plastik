@@ -14,7 +14,7 @@ import VideoModal from "../componets/videoModal/videoModal"
 import HeroSliderTwo from "../componets/heroSliderTwo"
 
 
-import { corporateAbout } from "../Data/dataThree"
+import { corporateAbout } from "data/dataThree"
 import { FaArrowRight } from "react-icons/fa"
 import { MdKeyboardArrowRight } from "react-icons/md"
 import { IconType } from "react-icons"

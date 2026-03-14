@@ -8,8 +8,8 @@ import CookieModal from '../componets/cookieModal'
 import MobileApp from '../componets/mobileApp'
 import ShopFooter from '../componets/Footer/shopFooter'
 
-import { productData } from '../Data/data'
-import { topCategories } from '../Data/dataThree'
+import { productData } from 'data/data'
+import { topCategories } from 'data/dataThree'
 import { FaArrowRight } from 'react-icons/fa'
 
 interface ProductData{
