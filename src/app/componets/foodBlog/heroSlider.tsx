@@ -82,7 +82,7 @@ export default function HeroSlider({ sliderProducts }: HeroSliderProps){
                                 <div className="absolute bottom-0 start-0 end-0 p-6 -mb-96 group-hover:mb-0 duration-500 ease-in-out">
                                     <div className="text-center">
                                         <a href="#" className="bg-indigo-600 text-white text-xs font-semibold px-2.5 py-0.5 rounded w-fit mx-auto h-5">{item.title}</a>
-                                        <a href="/food-recipe" className="text-white font-semibold hover:text-indigo-600 block text-lg mt-4 duration-500 ease-in-out">{item.description}</a>
+                                        <a href="/contact-one" className="text-white font-semibold hover:text-indigo-600 block text-lg mt-4 duration-500 ease-in-out">{item.description}</a>
                                         <div className="flex items-center justify-center mt-4">
                                             <Image src={item.imageList} width={40} height={40} className="size-10 rounded-full shadow-md dark:shadow-gray-800" alt="" />
                                             <a href="#" className="font-medium text-white block ms-2">{item.name}</a>
