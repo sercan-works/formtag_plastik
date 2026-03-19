@@ -42,8 +42,8 @@ const alex = Alex_Brush({
 
 
 export const metadata = {
-  title: 'Techwind - Next Js Multipurpose Landing & Admin Dashboard Template',
-  description: 'Techwind - Next Js Multipurpose Landing & Admin Dashboard Template',
+  title: 'Formtag Plastik | Termoform Üretim - Eskişehir',
+  description: 'Formtag Plastik — Eskişehir\'de termoform alanında üretim yapan yenilikçi plastik şekillendirme firması. Separator, gıda ambalajları ve teknik parçalar.',
 }
 
 export default function RootLayout({
