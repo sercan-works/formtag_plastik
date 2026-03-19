@@ -38,9 +38,10 @@ const about = aboutData as {
   cta_button: string
 }
 
-const { benefits, stats } = introData as {
+const { benefits, stats, slogan } = introData as {
   benefits: Array<{ icon: string; title: string; text: string }>
   stats: Array<{ value: string; label: string }>
+  slogan: string
 }
 
 export default function Page() {
@@ -119,12 +120,16 @@ export default function Page() {
                 <h3 className="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-semibold">
                   {about.story_title}
                 </h3>
-                <p className="text-slate-400 max-w-xl mb-4">
-                  {about.story_paragraph_1}
-                </p>
-                <p className="text-slate-400 max-w-xl">
-                  {about.story_paragraph_2}
-                </p>
+                <div className="text-slate-400 max-w-xl space-y-4">
+                  {about.story_paragraph_1.split('\n\n').map((p, i) => (
+                    <p key={i}>{p}</p>
+                  ))}
+                </div>
+                <div className="text-slate-400 max-w-xl mt-4 space-y-4">
+                  {about.story_paragraph_2.split('\n\n').map((p, i) => (
+                    <p key={i}>{p}</p>
+                  ))}
+                </div>
                 <div className="mt-6">
                   <Link
                     href="/contact-one"
@@ -185,6 +190,7 @@ export default function Page() {
       {/* CTA */}
       <section className="relative md:py-24 py-16 bg-indigo-600">
         <div className="container relative text-center">
+          <p className="text-indigo-200 text-lg font-medium mb-2">&ldquo;{slogan}&rdquo;</p>
           <h3 className="md:text-3xl text-2xl font-semibold text-white mb-4">{about.cta_title}</h3>
           <p className="text-white/90 max-w-xl mx-auto mb-6">{about.cta_text}</p>
           <Link

@@ -1,28 +1,29 @@
 {
   "intro": {
-    "title": "Ambalaj Üretiminde Güvenilir Çözüm Ortağınız",
-    "description": "Formtag Plastik olarak gıda, kozmetik, temizlik ve endüstriyel sektörlere yönelik etiket ve ambalaj ürünleri üretiyoruz. Kaliteli hammadde ve modern üretim tesisimizle ihtiyacınıza özel çözümler sunuyoruz."
+    "title": "Termoform Üretiminde Güvenilir Çözüm Ortağınız",
+    "description": "Formtag, Eskişehir'de plastik şekillendirme (termoform) alanında üretim yapan yenilikçi bir firmadır. Separator ürünler, termoform plastik parçalar, gıda sektörü plastikleri ve teknik parçalar ile güvenilir ve sürdürülebilir çözümler sunuyoruz."
   },
+  "slogan": "Plastiğe Şekil Veriyor, İşinize Değer Katıyoruz.",
   "benefits": [
     {
       "icon": "HiOutlineShieldCheck",
       "title": "Kalite & Standart",
-      "text": "Tüm ürünlerimiz sektör standartlarına uygun, kalite kontrolden geçmiş ambalaj çözümleri sunar."
+      "text": "Yüksek kalite standartlarıyla üretim yapıyor, güvenilir ve sürdürülebilir çözümler sunuyoruz."
     },
     {
       "icon": "HiOutlineLightningBolt",
-      "title": "Hızlı Üretim",
-      "text": "Esnek üretim kapasitemizle siparişlerinizi kısa sürede üretip teslim ediyoruz."
+      "title": "Hızlı Teslimat",
+      "text": "Zamanında tedarik ve hızlı teslimat prensibiyle projelerinizi eksiksiz tamamlıyoruz."
     },
     {
       "icon": "HiOutlineCube",
       "title": "Geniş Ürün Yelpazesi",
-      "text": "Etiket, shrink, streç, poşet ve özel ambalaj çözümleriyle ihtiyacınıza uygun seçenek sunuyoruz."
+      "text": "Separator, termoform parçalar, gıda ambalajları ve teknik parçalar ile ihtiyacınıza uygun çözümler."
     },
     {
       "icon": "HiOutlineTruck",
-      "title": "Güvenilir Tedarik",
-      "text": "Zamanında teslimat ve düzenli tedarik ile üretim süreçlerinizi kesintisiz yürütmenizi sağlıyoruz."
+      "title": "Güvenilir Çözüm Ortağı",
+      "text": "Hem gıda hem teknik sektörlerde güçlü ve güvenilir bir iş ortağı olarak hizmet veriyoruz."
     }
   ],
   "stats": [

@@ -7,6 +7,7 @@ import HeroSlider from '../componets/foodBlog/heroSlider'
 import LatestBlog from '../componets/foodBlog/latestBlog'
 import IntroSection from '../componets/foodBlog/introSection'
 import VitrinProducts from '../componets/foodBlog/vitrinProducts'
+import SloganHero from '../componets/foodBlog/sloganHero'
 import { getSliderProducts } from '@/app/lib/products'
 
 export const dynamic = 'force-dynamic'
@@ -24,6 +25,8 @@ export default async function Page() {
           </div>
         </div>
       </section>
+
+      <SloganHero />
 
       <section className="relative md:py-24 py-16">
         <div className="container relative">

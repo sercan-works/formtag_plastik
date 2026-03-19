@@ -1,10 +1,10 @@
 {
   "hero_title": "Hakkımızda",
-  "hero_subtitle": "Ambalaj ve etiket üretiminde güvenilir çözüm ortağınız.",
+  "hero_subtitle": "Eskişehir'de termoform alanında üretim yapan yenilikçi plastik şekillendirme firması.",
   "hero_banner_image": "/images/company/aboutus.jpg",
   "story_title": "Biz Kimiz?",
-  "story_paragraph_1": "Formtag Plastik olarak yıllardır gıda, kozmetik, temizlik ve endüstriyel sektörlere yönelik etiket ve ambalaj ürünleri üretiyoruz. Müşteri memnuniyetini ön planda tutarak, kaliteli hammadde ve modern üretim tesisimizle ihtiyacınıza özel çözümler sunuyoruz.",
-  "story_paragraph_2": "Sektördeki deneyimimiz ve uzman kadromuzla, küçük ölçekli siparişlerden toplu üretim taleplerine kadar esnek ve güvenilir bir tedarik zinciri sunuyoruz. Kalite kontrol süreçlerimizle her ürünün standartlara uygunluğunu garanti ediyoruz.",
+  "story_paragraph_1": "Formtag, Eskişehir'de faaliyet gösteren ve plastik şekillendirme (termoform) alanında üretim yapan yenilikçi bir üretim firmasıdır. Kurulduğu günden bu yana güven, kalite ve müşteri memnuniyeti odaklı çalışma anlayışıyla sektörüne değer katmayı hedeflemektedir.\n\nFirmamız; başta separator ürünler, termoform plastik parçalar, gıda sektöründe kullanılan plastik parçalar, parça tutucu ve kalıp içinde sabitleme amaçlı plastikler ile çeşitli termoform ambalaj ve teknik parçaların üretimini gerçekleştirmektedir. Üretim süreçlerimizde yüksek kalite standartlarını benimseyerek müşterilerimize güvenilir ve sürdürülebilir çözümler sunmaktayız.",
+  "story_paragraph_2": "Formtag olarak üretim gücümüzün temelinde tecrübeli ve uzman personelimiz, modern üretim anlayışımız ve yenilikçi bakış açımız yer almaktadır. Gelişen teknolojileri yakından takip ederek üretim süreçlerimizi sürekli iyileştiriyor, müşterilerimizin ihtiyaçlarına en doğru çözümleri sunmaya özen gösteriyoruz.\n\nMüşterilerimiz için en önemli konulardan biri olan zamanında tedarik ve hızlı teslimat prensibi, çalışma sistemimizin vazgeçilmez bir parçasıdır. Planlı üretim ve güçlü organizasyon yapımız sayesinde projeleri zamanında ve eksiksiz şekilde tamamlamayı hedefliyoruz.\n\nFormtag, kaliteye verdiği önem, güvenilir iş anlayışı ve yenilikçi üretim yaklaşımı ile hem gıda hem de teknik sektörlerde faaliyet gösteren firmalar için güçlü ve güvenilir bir çözüm ortağı olmaya devam etmektedir.",
   "story_images": [
     "/images/products/1.jpg",
     "/images/products/2.jpg",
@@ -12,7 +12,7 @@
   ],
   "story_image_alt": "Formtag Plastik üretim tesisleri",
   "values_title": "Değerlerimiz",
-  "values_subtitle": "Formtag Plastik olarak bu ilkelerle çalışıyoruz.",
+  "values_subtitle": "Formtag olarak bu ilkelerle çalışıyoruz.",
   "cta_title": "Sorularınız mı var?",
   "cta_text": "Ürünlerimiz ve hizmetlerimiz hakkında bilgi almak için bizimle iletişime geçin.",
   "cta_button": "İletişime Geçin"
