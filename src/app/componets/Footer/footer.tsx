@@ -3,12 +3,14 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { FiPhone, FiMail, FiMapPin } from 'react-icons/fi'
+import { FaFacebookF, FaInstagram } from 'react-icons/fa'
 import { MdKeyboardArrowRight } from 'react-icons/md'
 import settings from 'data/settings.json'
 
 export default function Footer() {
   const quickLinks = [
     { route: '/', title: 'Anasayfa' },
+    { route: '/urunlerimiz', title: 'Ürünlerimiz' },
     { route: '/page-aboutus', title: 'Hakkımızda' },
     { route: '/contact-one', title: 'İletişim' },
   ]
@@ -60,6 +62,32 @@ export default function Footer() {
                         </li>
                       )}
                     </ul>
+                    {(settings.facebook_url || settings.instagram_url) && (
+                      <div className="mt-6 flex items-center gap-3">
+                        {settings.facebook_url && (
+                          <a
+                            href={settings.facebook_url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Facebook"
+                            className="size-9 inline-flex items-center justify-center rounded-full bg-slate-800 hover:bg-indigo-600 text-gray-300 hover:text-white transition-colors"
+                          >
+                            <FaFacebookF className="size-4" />
+                          </a>
+                        )}
+                        {settings.instagram_url && (
+                          <a
+                            href={settings.instagram_url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Instagram"
+                            className="size-9 inline-flex items-center justify-center rounded-full bg-slate-800 hover:bg-indigo-600 text-gray-300 hover:text-white transition-colors"
+                          >
+                            <FaInstagram className="size-4" />
+                          </a>
+                        )}
+                      </div>
+                    )}
                   </div>
 
                   <div className="lg:col-span-3 md:col-span-6">

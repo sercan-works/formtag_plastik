@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { FiPhone } from 'react-icons/fi';
+import { FaFacebookF, FaInstagram } from 'react-icons/fa';
 import { HiOutlineMoon, HiOutlineSun } from 'react-icons/hi';
 import settings from 'data/settings.json';
 
@@ -114,6 +115,9 @@ export default function Navbar(props: { navClass: any; navJustify: any; }) {
                         <li className={manu === "/" || manu === "/index-food-blog" ? "active" : ""}>
                             <Link href="/" className="sub-menu-item">Anasayfa</Link>
                         </li>
+                        <li className={manu === "/urunlerimiz" ? "active" : ""}>
+                            <Link href="/urunlerimiz" className="sub-menu-item">Ürünlerimiz</Link>
+                        </li>
                         <li className={manu === "/page-aboutus" ? "active" : ""}>
                             <Link href="/page-aboutus" className="sub-menu-item">Hakkımızda</Link>
                         </li>
@@ -140,6 +144,32 @@ export default function Navbar(props: { navClass: any; navJustify: any; }) {
                         </a>
                     </div>
                 ) : null}
+                {(settings.facebook_url || settings.instagram_url) && (
+                    <div className="flex items-center gap-2">
+                        {settings.facebook_url && (
+                            <a
+                                href={settings.facebook_url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Facebook"
+                                className={`size-8 inline-flex items-center justify-center rounded-full transition-colors ${isLightNav ? 'bg-white/20 hover:bg-white/30 text-white' : 'bg-slate-100 hover:bg-indigo-600 hover:text-white dark:bg-slate-700 dark:hover:bg-indigo-600 text-slate-600 dark:text-slate-300'}`}
+                            >
+                                <FaFacebookF className="size-4" />
+                            </a>
+                        )}
+                        {settings.instagram_url && (
+                            <a
+                                href={settings.instagram_url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Instagram"
+                                className={`size-8 inline-flex items-center justify-center rounded-full transition-colors ${isLightNav ? 'bg-white/20 hover:bg-white/30 text-white' : 'bg-slate-100 hover:bg-indigo-600 hover:text-white dark:bg-slate-700 dark:hover:bg-indigo-600 text-slate-600 dark:text-slate-300'}`}
+                            >
+                                <FaInstagram className="size-4" />
+                            </a>
+                        )}
+                    </div>
+                )}
                 </div>
 
                 <div className={`menu-extras md:hidden flex items-center gap-2 ${isLightNav ? 'text-white' : ''}`}>

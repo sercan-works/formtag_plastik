@@ -11,7 +11,6 @@ import { HiOutlineShieldCheck, HiOutlineLightningBolt, HiOutlineCube, HiOutlineT
 import { MdKeyboardArrowRight } from 'react-icons/md'
 import type { IconType } from 'react-icons'
 
-import settings from 'data/settings.json'
 import aboutData from 'data/about.json'
 import introData from 'data/intro.json'
 
@@ -25,7 +24,6 @@ const iconMap: Record<string, IconType> = {
 const about = aboutData as {
   hero_title: string
   hero_subtitle: string
-  hero_banner_image: string
   story_title: string
   story_paragraph_1: string
   story_paragraph_2: string
@@ -47,49 +45,10 @@ const { benefits, stats, slogan } = introData as {
 export default function Page() {
   return (
     <>
-      <Navbar navClass="nav-light" navJustify={undefined} />
-
-      <section
-        className="relative table w-full py-36 lg:py-44 bg-no-repeat bg-center bg-cover"
-        style={{ backgroundImage: `url('${about.hero_banner_image}')` }}
-      >
-        <div className="absolute inset-0 bg-slate-900/75" />
-        <div className="container relative">
-          <div className="grid grid-cols-1 pb-8 text-center mt-10">
-            <h3 className="mb-6 md:text-4xl text-3xl md:leading-normal leading-normal font-medium text-white">
-              {about.hero_title}
-            </h3>
-            <p className="text-slate-300 text-lg max-w-xl mx-auto">
-              {about.hero_subtitle}
-            </p>
-          </div>
-        </div>
-
-        <div className="absolute text-center z-10 bottom-5 start-0 end-0 mx-3">
-          <ul className="tracking-[0.5px] mb-0 inline-flex mx-auto space-x-1">
-            <li className="inline-block uppercase text-[13px] font-bold duration-500 ease-in-out text-white/50 hover:text-white">
-              <Link href="/">{settings.company_name}</Link>
-            </li>
-            <li className="inline-block text-base text-white/50 mx-0.5 ltr:rotate-0 rtl:rotate-180">
-              <MdKeyboardArrowRight className="text-xl" />
-            </li>
-            <li className="inline-block uppercase text-[13px] font-bold duration-500 ease-in-out text-white" aria-current="page">
-              {about.hero_title}
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="relative">
-        <div className="shape absolute sm:-bottom-px -bottom-[2px] start-0 end-0 overflow-hidden z-1 text-white dark:text-slate-900">
-          <svg className="w-full h-auto scale-[2.0] origin-top" viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor" />
-          </svg>
-        </div>
-      </div>
+      <Navbar navClass={undefined} navJustify={undefined} />
 
       {/* Biz kimiz */}
-      <section className="relative md:py-24 py-16">
+      <section className="relative md:py-24 py-16 mt-[74px]">
         <div className="container relative">
           <div className="grid md:grid-cols-12 grid-cols-1 items-center gap-[30px]">
             <div className="lg:col-span-5 md:col-span-6">

@@ -1,124 +1,118 @@
 import React from 'react'
-import Link from 'next/link'
 import Navbar from '../componets/Navbar/navbar'
 import Footer from '../componets/Footer/footer'
 import Switcher from '../componets/switcher'
-import { MdKeyboardArrowRight } from 'react-icons/md'
 import { FiPhone, FiMapPin, FiMail } from 'react-icons/fi'
+import { FaFacebookF, FaInstagram } from 'react-icons/fa'
 import settings from 'data/settings.json'
-import aboutData from 'data/about.json'
-
-const about = aboutData as { hero_banner_image: string }
 
 export default function Page() {
   const fullAddress = [settings.address, settings.city].filter(Boolean).join(', ')
+  const hasSocial = Boolean(settings.facebook_url || settings.instagram_url)
 
   return (
     <>
-      <Navbar navClass="nav-light" navJustify={undefined} />
+      <Navbar navClass={undefined} navJustify={undefined} />
 
-      <section
-        className="relative table w-full py-36 bg-center bg-no-repeat bg-cover"
-        style={{ backgroundImage: `url('${about.hero_banner_image}')` }}
-      >
-        <div className="absolute inset-0 bg-slate-900/75" />
+      <section className="relative pt-[90px] md:pt-[110px] md:pb-20 pb-12">
         <div className="container relative">
-          <div className="grid grid-cols-1 pb-8 text-center mt-10">
-            <h3 className="md:text-4xl text-3xl md:leading-normal tracking-wide leading-normal font-medium text-white">
-              İletişim
-            </h3>
-            <p className="text-slate-300 text-lg max-w-xl mx-auto mt-2">
+          <div className="text-center mb-8 md:mb-12">
+            <h1 className="md:text-4xl text-3xl font-semibold text-slate-800 dark:text-white">İletişim</h1>
+            <p className="text-slate-500 dark:text-slate-400 mt-2 max-w-xl mx-auto">
               Bize ulaşın, sorularınızı yanıtlayalım.
             </p>
           </div>
-        </div>
 
-        <div className="absolute text-center z-10 bottom-5 start-0 end-0 mx-3">
-          <ul className="tracking-[0.5px] mb-0 inline-flex flex-wrap justify-center gap-1">
-            <li className="inline-block uppercase text-[13px] font-bold duration-500 ease-in-out text-white/50 hover:text-white">
-              <Link href="/">{settings.company_name}</Link>
-            </li>
-            <li className="inline-block text-base text-white/50 ltr:rotate-0 rtl:rotate-180">
-              <MdKeyboardArrowRight className="text-xl" />
-            </li>
-            <li className="inline-block uppercase text-[13px] font-bold duration-500 ease-in-out text-white" aria-current="page">
-              İletişim
-            </li>
-          </ul>
-        </div>
-      </section>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-stretch">
+            {/* Harita */}
+            <div className="w-full h-[300px] sm:h-[380px] md:h-[460px] lg:h-auto lg:min-h-[520px] rounded-2xl overflow-hidden shadow-md dark:shadow-gray-800 border border-slate-200 dark:border-slate-700">
+              <iframe
+                title="Formtag Plastik konum"
+                src={settings.google_maps_link}
+                className="w-full h-full border-0 block"
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
 
-      <div className="relative">
-        <div className="shape absolute sm:-bottom-px -bottom-[2px] start-0 end-0 overflow-hidden z-1 text-white dark:text-slate-900">
-          <svg className="w-full h-auto scale-[2.0] origin-top" viewBox="0 0 2880 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z" fill="currentColor" />
-          </svg>
-        </div>
-      </div>
+            {/* Sağ kolon: kartlar + sosyal */}
+            <div className="flex flex-col gap-4 md:gap-6">
+              <div className="grid grid-cols-2 lg:grid-cols-1 gap-3 md:gap-4 flex-1">
+                {settings.phone1 && (
+                  <a
+                    href={`tel:${settings.phone1.replace(/\s/g, '')}`}
+                    className="group flex lg:flex-row flex-col items-center lg:items-center text-center lg:text-left lg:gap-5 p-4 md:p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-xl hover:border-indigo-200 dark:hover:border-indigo-900/50 transition-all duration-300"
+                  >
+                    <div className="size-11 md:size-14 rounded-xl bg-indigo-100 dark:bg-indigo-900/40 flex items-center justify-center text-indigo-600 dark:text-indigo-400 group-hover:scale-110 transition-transform duration-300 mb-3 lg:mb-0 shrink-0">
+                      <FiPhone className="size-5 md:size-6" />
+                    </div>
+                    <div className="min-w-0">
+                      <h4 className="text-sm md:text-base font-semibold text-slate-800 dark:text-white mb-1">Telefon</h4>
+                      <p className="text-slate-500 dark:text-slate-400 text-xs md:text-sm break-all">{settings.phone1}</p>
+                      {settings.phone2 && <p className="text-slate-500 dark:text-slate-400 text-xs md:text-sm break-all">{settings.phone2}</p>}
+                    </div>
+                  </a>
+                )}
 
-      {/* Telefon, Adres, E-posta kartları */}
-      <section className="relative md:py-24 py-16">
-        <div className="container relative">
-          <div className="grid md:grid-cols-3 grid-cols-1 gap-8">
-            {settings.phone1 && (
-              <a
-                href={`tel:${settings.phone1.replace(/\s/g, '')}`}
-                className="group flex flex-col items-center text-center p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-xl hover:border-indigo-200 dark:hover:border-indigo-900/50 transition-all duration-300"
-              >
-                <div className="size-16 rounded-2xl bg-indigo-100 dark:bg-indigo-900/40 flex items-center justify-center text-indigo-600 dark:text-indigo-400 group-hover:scale-110 transition-transform duration-300 mb-5">
-                  <FiPhone className="size-8" />
-                </div>
-                <h4 className="text-lg font-semibold text-slate-800 dark:text-white mb-2">Telefon</h4>
-                <p className="text-slate-500 dark:text-slate-400 text-sm mb-1">{settings.phone1}</p>
-                {settings.phone2 && <p className="text-slate-500 dark:text-slate-400 text-sm">{settings.phone2}</p>}
-                <span className="mt-3 text-indigo-600 dark:text-indigo-400 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
-                  Arayın →
-                </span>
-              </a>
-            )}
+                {settings.email && (
+                  <a
+                    href={`mailto:${settings.email}`}
+                    className="group flex lg:flex-row flex-col items-center lg:items-center text-center lg:text-left lg:gap-5 p-4 md:p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-xl hover:border-indigo-200 dark:hover:border-indigo-900/50 transition-all duration-300"
+                  >
+                    <div className="size-11 md:size-14 rounded-xl bg-indigo-100 dark:bg-indigo-900/40 flex items-center justify-center text-indigo-600 dark:text-indigo-400 group-hover:scale-110 transition-transform duration-300 mb-3 lg:mb-0 shrink-0">
+                      <FiMail className="size-5 md:size-6" />
+                    </div>
+                    <div className="min-w-0">
+                      <h4 className="text-sm md:text-base font-semibold text-slate-800 dark:text-white mb-1">E-posta</h4>
+                      <p className="text-slate-500 dark:text-slate-400 text-xs md:text-sm break-all">{settings.email}</p>
+                    </div>
+                  </a>
+                )}
 
-            {fullAddress && (
-              <div className="flex flex-col items-center text-center p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-xl hover:border-indigo-200 dark:hover:border-indigo-900/50 transition-all duration-300">
-                <div className="size-16 rounded-2xl bg-indigo-100 dark:bg-indigo-900/40 flex items-center justify-center text-indigo-600 dark:text-indigo-400 mb-5">
-                  <FiMapPin className="size-8" />
-                </div>
-                <h4 className="text-lg font-semibold text-slate-800 dark:text-white mb-2">Adres</h4>
-                <p className="text-slate-500 dark:text-slate-400 text-sm">{fullAddress}</p>
+                {fullAddress && (
+                  <div className="col-span-2 lg:col-span-1 flex lg:flex-row flex-col items-center lg:items-center text-center lg:text-left lg:gap-5 p-4 md:p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-xl hover:border-indigo-200 dark:hover:border-indigo-900/50 transition-all duration-300">
+                    <div className="size-11 md:size-14 rounded-xl bg-indigo-100 dark:bg-indigo-900/40 flex items-center justify-center text-indigo-600 dark:text-indigo-400 mb-3 lg:mb-0 shrink-0">
+                      <FiMapPin className="size-5 md:size-6" />
+                    </div>
+                    <div className="min-w-0">
+                      <h4 className="text-sm md:text-base font-semibold text-slate-800 dark:text-white mb-1">Adres</h4>
+                      <p className="text-slate-500 dark:text-slate-400 text-xs md:text-sm">{fullAddress}</p>
+                    </div>
+                  </div>
+                )}
               </div>
-            )}
 
-            {settings.email && (
-              <a
-                href={`mailto:${settings.email}`}
-                className="group flex flex-col items-center text-center p-8 rounded-2xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-xl hover:border-indigo-200 dark:hover:border-indigo-900/50 transition-all duration-300"
-              >
-                <div className="size-16 rounded-2xl bg-indigo-100 dark:bg-indigo-900/40 flex items-center justify-center text-indigo-600 dark:text-indigo-400 group-hover:scale-110 transition-transform duration-300 mb-5">
-                  <FiMail className="size-8" />
+              {hasSocial && (
+                <div className="flex flex-col items-center lg:items-start lg:flex-row lg:gap-4 mt-4 lg:mt-2 p-4 md:p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-700">
+                  <h4 className="text-sm md:text-base font-semibold text-slate-800 dark:text-white mb-3 lg:mb-0 lg:self-center">Bizi takip edin</h4>
+                  <div className="flex items-center gap-3 lg:ms-auto">
+                    {settings.facebook_url && (
+                      <a
+                        href={settings.facebook_url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Facebook"
+                        className="size-10 md:size-11 inline-flex items-center justify-center rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:bg-indigo-600 hover:text-white hover:border-indigo-600 transition-colors shadow-sm"
+                      >
+                        <FaFacebookF className="size-4 md:size-5" />
+                      </a>
+                    )}
+                    {settings.instagram_url && (
+                      <a
+                        href={settings.instagram_url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Instagram"
+                        className="size-10 md:size-11 inline-flex items-center justify-center rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:bg-indigo-600 hover:text-white hover:border-indigo-600 transition-colors shadow-sm"
+                      >
+                        <FaInstagram className="size-4 md:size-5" />
+                      </a>
+                    )}
+                  </div>
                 </div>
-                <h4 className="text-lg font-semibold text-slate-800 dark:text-white mb-2">E-posta</h4>
-                <p className="text-slate-500 dark:text-slate-400 text-sm break-all">{settings.email}</p>
-                <span className="mt-3 text-indigo-600 dark:text-indigo-400 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
-                  E-posta gönderin →
-                </span>
-              </a>
-            )}
-          </div>
-        </div>
-      </section>
-
-      {/* Google Harita */}
-      <section className="relative md:py-16 py-10">
-        <div className="container relative">
-          <h3 className="text-2xl font-semibold text-slate-800 dark:text-white text-center mb-6">Harita</h3>
-          <div className="w-full overflow-hidden rounded-xl shadow-lg dark:shadow-gray-800 border border-slate-200 dark:border-slate-700">
-            <iframe
-              title="Formtag Plastik konum"
-              src={settings.google_maps_link}
-              className="w-full h-[400px] sm:h-[450px] md:h-[520px] lg:h-[560px] border-0"
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
+              )}
+            </div>
           </div>
         </div>
       </section>
